@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+import { discography } from '../../data/discography.js';
+import { works } from '../../data/works.js';
+
+const recentTracks = discography.slice(0, 3);
+const recentWorks  = works.slice(0, 3);
+---
+
+<BaseLayout>
+
+  <!-- ヒーロー -->
+  <section class="ocean-hero min-h-[20vh] flex items-center justify-center relative overflow-hidden">
+    <div class="relative z-10 text-center px-4 max-w-sm mx-auto">
+      <img src="/images/logo.svg" alt={SITE_CONFIG.name} class="w-80 md:w-80 h-auto mx-auto mb-6 drop-shadow-lg" />
+      <!-- <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/discography" class="btn btn-primary btn-md shadow-lg">Discography</a>
+        <a href="/about"       class="btn btn-outline btn-md text-white border-white/40 hover:bg-white/10 hover:border-white">About</a>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- 波区切り -->
+  <div class="wave-divider" style="background-color:#1251a3;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="60">
+      <path fill="#d4e9f7" d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z"/>
+    </svg>
+  </div>
+
+  <!-- 最新楽曲 -->
+  <section class="py-20 px-4 bg-base-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-4xl section-title">Latest Releases</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {recentTracks.map(track => (
+          <a href={`/discography/${track.id}`}
+             class="card bg-base-200 border border-base-300 shadow hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <figure class="aspect-video bg-base-300 overflow-hidden rounded-t-2xl">
+              {track.youtube ? (
+                <img src={`https://img.youtube.com/vi/${track.youtube}/mqdefault.jpg`}
+                     alt={track.title}
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              ) : track.thumbnail ? (
+                <img src={track.thumbnail} alt={track.title}
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-5xl">🎵</div>
+              )}
+            </figure>
+            <div class="card-body p-4">
+              <h3 class="font-display font-semibold text-lg group-hover:text-primary transition-colors leading-snug">
+                {track.title}
+              </h3>
+              <div class="flex flex-wrap gap-1 mt-1">
+                {track.tags.slice(0, 3).map(tag => (
+                  <span class="badge badge-primary badge-outline badge-sm">{tag}</span>
+                ))}
+              </div>
+              <p class="text-xs text-base-content/40 mt-1">{track.date}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/discography" class="btn btn-outline btn-primary">すべて見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 波区切り -->
+  <div class="wave-divider bg-base-100">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="60">
+      <path fill="#b3d5ee" d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z"/>
+    </svg>
+  </div>
+
+  <!-- 最新実績 -->
+  <section class="py-20 px-4 bg-base-200 bubble-bg">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-4xl section-title">Recent Works</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {recentWorks.map(work => (
+          <a href={`/works/${work.id}`}
+             class="card bg-base-100 border border-base-300 shadow hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <div class="card-body p-5">
+              <h3 class="font-display font-semibold text-lg group-hover:text-primary transition-colors leading-snug">
+                {work.title}
+              </h3>
+              <div class="flex flex-wrap gap-1 mt-2">
+                {work.tags.slice(0, 3).map(tag => (
+                  <span class="badge badge-secondary badge-outline badge-sm">{tag}</span>
+                ))}
+              </div>
+              <p class="text-sm text-base-content/60 mt-2 line-clamp-2">{work.description}</p>
+              <p class="text-xs text-base-content/40 mt-2">{work.date}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/works" class="btn btn-outline btn-secondary">すべて見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- リンク -->
+  <section class="py-20 px-4 bg-base-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-display font-bold text-3xl section-title mb-12 inline-block">Links</h2>
+      <div class="flex flex-wrap gap-3 justify-center">
+        {SITE_CONFIG.links.map(link => (
+          <a href={link.url} target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline hover:btn-primary transition-all">
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

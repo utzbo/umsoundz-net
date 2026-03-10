@@ -1,0 +1,196 @@
+---
+import { SITE_CONFIG } from '../config.js';
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE_CONFIG.name}` : SITE_CONFIG.name;
+const pageDesc  = description || SITE_CONFIG.description;
+---
+<!DOCTYPE html>
+<html lang="ja" data-theme="ultramarine" style="background-image: none;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={pageDesc} />
+  <title>{pageTitle}</title>
+  <link rel="icon" href="/public/images/mark_blue.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style is:global>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.02em; }
+    .card-title, .card .font-display { font-family: 'Noto Sans JP', sans-serif; letter-spacing: 0; }
+    html { scroll-behavior: smooth; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #b3d5ee; }
+    ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 3px; }
+
+    /* ============================================
+       泡模様の背景（画像不要・CSSのみ）
+    ============================================ */
+    .bubble-bg {
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.30) 1px,  transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.20) 2px,  transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 3px,  transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,0.10) 5px,  transparent 5px),
+        radial-gradient(circle, rgba(255,255,255,0.06) 8px,  transparent 8px);
+      background-size:
+        50px  50px,
+        90px  90px,
+        130px 130px,
+        200px 200px,
+        310px 310px;
+      background-position:
+        5px  10px,
+        35px 55px,
+        70px 20px,
+        110px 80px,
+        180px 140px;
+    }
+
+    /* ============================================
+       ヒーロー：深海グラデーション + 泡
+    ============================================ */
+    .ocean-hero {
+      background-color: #072e80 !important;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #1a6fd4 0%, #0d4aab 35%, #072e80 70%, #041a5c 100%) !important;
+      background-size:
+        24px 24px,
+        100% 100% !important;
+      background-position:
+        0 0,
+        0 0 !important;
+    }
+
+    /* ============================================
+       波区切りSVG
+    ============================================ */
+    .wave-divider { display: block; line-height: 0; overflow: hidden; }
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* ============================================
+       セクション見出しアンダーライン
+    ============================================ */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, #2563eb, #0ea5e9, #7dd3fc);
+      border-radius: 2px;
+    }
+
+    /* ============================================
+       カードスクロールエリア（ディスコ・実績ページ）
+    ============================================ */
+    .card-scroll-area {
+      max-height: 65vh;
+      overflow-y: scroll;
+      padding-right: 6px;
+    }
+    .card-scroll-area::-webkit-scrollbar { width: 4px; }
+    .card-scroll-area::-webkit-scrollbar-track { background: #b3d5ee; border-radius: 2px; }
+    .card-scroll-area::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
+
+    /* ============================================
+   ページヘッダー（各ページのh1エリア）
+    ============================================ */
+    .page-hero {
+      background-color: #072e80 !important;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #0f5da8 0%, #0a3d8f 45%, #061e6e 100%) !important;
+      background-size:
+        24px 24px,
+        100% 100% !important;
+      background-position:
+        0 0,
+        0 0 !important;
+    }
+  </style>
+</head>
+<body class="bg-base-100 text-base-content min-h-screen flex flex-col">
+
+  <!-- ナビゲーション -->
+  <nav class="navbar bg-neutral text-neutral-content sticky top-0 z-50 shadow-lg">
+    <div class="navbar-start">
+      <!-- モバイルメニュー -->
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-neutral-content">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
+          <li><a href="/">トップ</a></li>
+          <li><a href="/about">サークル紹介</a></li>
+          <li><a href="/discography">ディスコグラフィー</a></li>
+          <li><a href="/works">実績</a></li>
+          <li><a href="/terms">楽曲利用条件</a></li>
+          <li><a href="/links">リンク</a></li>
+          <li><a href="/contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <!-- ロゴ -->
+      <a href="/" class="flex items-center gap-2 ml-1">
+        <img src={SITE_CONFIG.logo} alt={SITE_CONFIG.name}
+             class="h-7 w-auto"
+             onerror="this.style.display='none'" />
+        <span class="font-display font-bold text-xl tracking-widest text-white">
+          {SITE_CONFIG.name}
+        </span>
+      </a>
+    </div>
+
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal gap-1 text-sm">
+        <li><a href="/" class="text-neutral-content/80 hover:text-white transition-colors">Top</a></li>
+        <li><a href="/about" class="text-neutral-content/80 hover:text-white transition-colors">About</a></li>
+        <li><a href="/discography" class="text-neutral-content/80 hover:text-white transition-colors">Discography</a></li>
+        <li><a href="/works" class="text-neutral-content/80 hover:text-white transition-colors">Works</a></li>
+        <li><a href="/terms" class="text-neutral-content/80 hover:text-white transition-colors">Terms</a></li>
+        <li><a href="/links" class="text-neutral-content/80 hover:text-white transition-colors">Links</a></li>
+        <li><a href="/contact" class="text-neutral-content/80 hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="navbar-end pr-4">
+    </div>
+  </nav>
+
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-neutral text-neutral-content mt-16">
+    <div class="bubble-bg bg-neutral">
+      <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col items-center gap-6">
+        <p class="font-display font-bold text-2xl tracking-widest text-white">{SITE_CONFIG.name}</p>
+        <nav class="flex flex-wrap justify-center gap-5 text-sm text-neutral-content/60">
+          <a href="/about"        class="hover:text-white transition-colors">About</a>
+          <a href="/discography"  class="hover:text-white transition-colors">Discography</a>
+          <a href="/works"        class="hover:text-white transition-colors">Works</a>
+          <a href="/terms"        class="hover:text-white transition-colors">Terms</a>
+          <a href="/links"        class="hover:text-white transition-colors">Links</a>
+          <a href="/contact"      class="hover:text-white transition-colors">Contact</a>
+        </nav>
+        <p class="text-xs text-neutral-content/40">© {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

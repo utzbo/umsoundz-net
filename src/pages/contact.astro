@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+---
+
+<BaseLayout title="Contact">
+  <section class="page-hero text-center py-16 px-4 mb-12">
+    <h1 class="font-display font-bold text-5xl text-white inline-block">Contact</h1>
+    <p class="text-white/60 mt-4">お問い合わせ</p>
+  </section>
+
+  <div class="max-w-2xl mx-auto px-4 py-16">
+
+    <p class="text-center text-base-content/70 mb-10 leading-relaxed whitespace-pre-line">{SITE_CONFIG.contact.note}</p>
+
+    <div class="flex flex-col gap-6">
+
+      {SITE_CONFIG.contact.email && (
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h2 class="card-title font-display text-lg">✉ メール</h2>
+            <p class="text-base-content/80 mt-2">{SITE_CONFIG.contact.email}</p>
+            <p class="text-xs text-base-content/50 mt-1">※ [at]を@に置き換えてください。</p>
+          </div>
+        </div>
+      )}
+
+      <div class="text-sm">
+        <p class="text-left text-base-content/70 mb-10 leading-relaxed whitespace-pre-line">
+          有償依頼はご予算、納期をお伝えください。
+          制作依頼の場合は併せて楽曲のイメージやジャンル、参考音源などもお伝えいただけるとスムーズです。
+
+          返信には数日かかる場合がございます。万が一1週間以上経っても返信がない場合は、お手数ですが再度ご連絡いただけますと幸いです。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

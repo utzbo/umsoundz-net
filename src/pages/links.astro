@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+---
+
+<BaseLayout title="Links">
+  <section class="page-hero text-center py-16 px-4 mb-12">
+    <h1 class="font-display font-bold text-5xl text-white inline-block">Links</h1>
+    <p class="text-white/60 mt-4">各種リンク・SNS</p>
+  </section>
+
+  <div class="max-w-xl mx-auto px-4 py-16">
+
+    <div class="flex flex-col gap-3">
+      {SITE_CONFIG.links.map(link => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-lg w-full justify-between hover:btn-primary transition-all">
+          <span>{link.label}</span>
+          <span class="opacity-50">↗</span>
+        </a>
+      ))}
+      <div class="divider text-xs text-base-content/40">お問い合わせ</div>
+      <a href="/contact" class="btn btn-primary btn-lg w-full justify-between">
+        <span>✉ お問い合わせ・楽曲利用のご相談</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { works, allWorkTags, workCategories } from '../../../data/works.js';
+---
+
+<BaseLayout title="Works">
+  <section class="page-hero text-center py-16 px-4 mb-12">
+    <h1 class="font-display font-bold text-5xl text-white inline-block">Works</h1>
+    <p class="text-white/60 mt-4">制作・提供実績</p>
+  </section>
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <div id="works-app">
+
+      <!-- タグ一覧 -->
+      <div class="flex flex-wrap gap-2 items-center mb-3">
+        <span class="text-sm font-medium text-base-content/60 mr-1">タグで絞り込み：</span>
+        <button id="tag-all"
+          class="badge badge-primary cursor-pointer py-3 px-3 text-sm font-medium"
+        >すべて</button>
+        {allWorkTags.map(tag => (
+          <button
+            class="tag-btn badge badge-outline cursor-pointer py-3 px-3 text-sm font-medium transition-all"
+            data-tag={tag}
+          >{tag}</button>
+        ))}
+      </div>
+
+      <!-- 件数 -->
+      <p class="text-sm text-base-content/50 mb-4">
+        <span id="works-count">{works.length}</span>件表示中
+      </p>
+
+      <!-- カードスクロールエリア -->
+      <div style="max-height: 45vh; overflow-y: auto; padding-right: 6px;">
+        <div id="works-list" class="flex flex-col gap-4">
+          {works.map(work => (
+            <a
+              href={"/works/" + work.id}
+              class="work-card card card-side bg-base-200 border border-base-300 shadow hover:shadow-lg transition-all hover:-translate-y-0.5 group"
+              data-tags={work.tags.join(',')}
+            >
+              {(work.thumbnail || work.youtube) && (
+                <figure class="w-32 md:w-48 flex-shrink-0 overflow-hidden rounded-l-2xl bg-base-300">
+                  {work.thumbnail ? (
+                    <img src={work.thumbnail} alt={work.title}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  ) : work.youtube ? (
+                    <img src={"https://img.youtube.com/vi/" + work.youtube + "/mqdefault.jpg"} alt={work.title}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  ) : null}
+                </figure>
+              )}
+              <div class="card-body p-5 min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  {(Array.isArray(work.category) ? work.category : [work.category]).map(cat => (
+                    <span class="badge badge-accent badge-sm">
+                      {workCategories[cat] || cat}
+                    </span>
+                  ))}
+                  <span class="text-xs text-base-content/40">{work.date}</span>
+                </div>
+                <h2 class="font-display font-semibold text-xl group-hover:text-primary transition-colors">
+                  {work.title}
+                </h2>
+                <p class="text-sm text-base-content/60 truncate">{work.description}</p>
+                <div class="flex flex-wrap gap-1 mt-2">
+                  {work.tags.map(tag => (
+                    <span class="badge badge-outline badge-sm text-xs">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <!-- 0件メッセージ -->
+        <div id="works-empty" class="hidden text-center py-20 text-base-content/40">
+          <p class="text-4xl mb-4">🔍</p>
+          <p>該当する実績が見つかりませんでした</p>
+          <button id="works-reset" class="btn btn-sm btn-outline mt-4">タグをリセット</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const allBtn   = document.getElementById('tag-all');
+  const tagBtns  = document.querySelectorAll('.tag-btn');
+  const cards    = document.querySelectorAll('.work-card');
+  const countEl  = document.getElementById('works-count');
+  const emptyEl  = document.getElementById('works-empty');
+  const resetBtn = document.getElementById('works-reset');
+
+  let activeTags = new Set();
+
+  function applyFilter() {
+    let visible = 0;
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').split(',').filter(Boolean);
+      const show = activeTags.size === 0
+        || [...activeTags].every(t => cardTags.includes(t));
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = String(visible);
+    emptyEl.classList.toggle('hidden', visible > 0);
+  }
+
+  function updateButtons() {
+    const noneActive = activeTags.size === 0;
+    allBtn.classList.toggle('badge-primary', noneActive);
+    allBtn.classList.toggle('badge-outline', !noneActive);
+    tagBtns.forEach(b => {
+      const active = activeTags.has(b.dataset.tag);
+      b.classList.toggle('badge-primary', active);
+      b.classList.toggle('badge-outline',  !active);
+    });
+  }
+
+  allBtn.addEventListener('click', () => {
+    activeTags.clear();
+    updateButtons();
+    applyFilter();
+  });
+
+  tagBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag;
+      activeTags.has(tag) ? activeTags.delete(tag) : activeTags.add(tag);
+      updateButtons();
+      applyFilter();
+    });
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    activeTags.clear();
+    updateButtons();
+    applyFilter();
+  });
+</script>

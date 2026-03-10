@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import YoutubeEmbed from '../../components/YoutubeEmbed.astro';
+import { works, workCategories } from '../../../data/works.js';
+
+export function getStaticPaths() {
+  return works.map(work => ({
+    params: { id: work.id },
+    props:  { work },
+  }));
+}
+const { work } = Astro.props;
+---
+
+<BaseLayout title={work.title} description={work.description}>
+  <div class="max-w-3xl mx-auto px-4 py-16">
+
+    <div class="breadcrumbs text-sm mb-8 opacity-60">
+      <ul>
+        <li><a href="/">Top</a></li>
+        <li><a href="/works">Works</a></li>
+        <li>{work.title}</li>
+      </ul>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-2 mb-3">
+        {(Array.isArray(work.category) ? work.category : [work.category]).map(cat => (
+          <span class="badge badge-accent">
+            {workCategories[cat] || cat}
+          </span>
+        ))}
+        <span class="text-sm text-base-content/50">{work.date}</span>
+      </div>
+      <h1 class="font-bold text-4xl leading-tight" style="font-family: 'Noto Sans JP', sans-serif;">{work.title}</h1>
+      <div class="flex flex-wrap gap-2 mt-4">
+        {work.tags.map(tag => (
+          <span class="badge badge-outline">{tag}</span>
+        ))}
+      </div>
+    </div>
+
+    <!-- YouTube -->
+    {work.youtube && (
+      <div class="mb-8">
+        <YoutubeEmbed videoId={work.youtube} title={work.title} />
+      </div>
+    )}
+
+    <!-- SoundCloud -->
+    {work.soundcloudUrl && (
+      <div class="mb-8 rounded-xl overflow-hidden shadow-md">
+        <iframe
+          src={work.soundcloudUrl}
+          width="100%"
+          height="166"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          class="w-full"
+        ></iframe>
+      </div>
+    )}
+
+    <!-- 説明 -->
+    {work.description && (
+      <p class="text-base-content/70 leading-relaxed mb-8 whitespace-pre-line">{work.description}</p>
+    )}
+
+    <!-- 外部リンクボタン -->
+    {work.externalLinks && work.externalLinks.length > 0 && (
+      <div class="card bg-base-200 border border-base-300 p-5 mb-8">
+        <h2 class="font-display font-semibold text-base mb-3">関連リンク</h2>
+        <div class="flex flex-wrap gap-3">
+          {work.externalLinks.map(link => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline btn-sm hover:btn-primary transition-all">
+              {link.label} ↗
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="mt-12 pt-8 border-t border-base-300">
+      <a href="/works" class="btn btn-ghost btn-sm">← Works 一覧に戻る</a>
+    </div>
+
+  </div>
+</BaseLayout>

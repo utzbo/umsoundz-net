@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+---
+
+<BaseLayout title="About">
+  <section class="page-hero text-center py-16 px-4 mb-12">
+    <h1 class="font-display font-bold text-5xl text-white inline-block">About</h1>
+    <p class="text-white/60 mt-4">サークル・主催紹介</p>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <!-- サークル紹介 -->
+    <section class="mb-16">
+      <div class="card bg-base-300 border border-base-300 p-4 md:p-8 bubble-bg">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0 text-center">
+            <img src={SITE_CONFIG.logo} alt={SITE_CONFIG.name}
+                class="w-40 h-40 object-contain mx-auto mb-3"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="w-40 h-40 rounded-2xl bg-gradient-to-br from-primary to-secondary
+                        flex items-center justify-center mx-auto mb-3
+                        text-4xl text-white font-display font-bold" style="display:none">
+              {SITE_CONFIG.name.charAt(0)}
+            </div>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-4">{SITE_CONFIG.name}</h2>
+            <p class="text-base-content/70 leading-relaxed whitespace-pre-line">{SITE_CONFIG.description}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 主催者紹介 -->
+    <section class="mb-16">
+      <h2 class="font-display font-bold text-3xl section-title mb-10 inline-block">Organizer</h2>
+      <div class="card bg-base-100 border border-base-300 shadow p-8">
+        <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <div class="avatar flex-shrink-0">
+            <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <img src={SITE_CONFIG.organizer.avatar} alt={SITE_CONFIG.organizer.name}
+                  onerror="this.parentElement.style.display='none'; document.getElementById('avatar-fallback').style.display='flex'" />
+            </div>
+          </div>
+          <div id="avatar-fallback"
+              class="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary
+                      text-white text-3xl font-display font-bold flex-shrink-0
+                      items-center justify-center" style="display:none">
+            {SITE_CONFIG.organizer.name.charAt(0)}
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display font-bold text-2xl">{SITE_CONFIG.organizer.name}</h3>
+            <p class="text-primary font-medium text-sm mb-3">{SITE_CONFIG.organizer.role}</p>
+            <p class="text-base-content/70 leading-relaxed text-sm whitespace-pre-line">{SITE_CONFIG.organizer.bio}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- リンク -->
+    <section>
+      <h2 class="font-display font-bold text-3xl section-title mb-10 inline-block">Links</h2>
+      <div class="flex flex-wrap gap-3">
+        {SITE_CONFIG.links.map(link => (
+          <a href={link.url} target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline hover:btn-primary transition-all">
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

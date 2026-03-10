@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import YoutubeEmbed from '../../components/YoutubeEmbed.astro';
+import { discography } from '../../../data/discography.js';
+
+export function getStaticPaths() {
+  return discography.map(track => ({
+    params: { id: track.id },
+    props:  { track },
+  }));
+}
+const { track } = Astro.props;
+---
+
+<BaseLayout title={track.title} description={track.description}>
+  <div class="max-w-3xl mx-auto px-4 py-16">
+
+    <div class="breadcrumbs text-sm mb-8 opacity-60">
+      <ul>
+        <li><a href="/">Top</a></li>
+        <li><a href="/discography">Discography</a></li>
+        <li>{track.title}</li>
+      </ul>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class={`badge ${track.type === 'original' ? 'badge-primary' : track.type === 'arrange' ? 'badge-secondary' : 'badge-accent'}`}>
+          {track.type === 'original' ? 'オリジナル' : track.type === 'arrange' ? 'アレンジ' : '楽曲提供'}
+        </span>
+        <span class="text-sm text-base-content/50">{track.date}</span>
+      </div>
+      <h1 class="font-bold text-4xl leading-tight" style="font-family: 'Noto Sans JP', sans-serif;">{track.title}</h1>
+      <div class="flex flex-wrap gap-2 mt-4">
+        {track.tags.map(tag => (
+          <span class="badge badge-outline">{tag}</span>
+        ))}
+      </div>
+    </div>
+
+    {track.youtube && (
+      <div class="mb-8">
+        <YoutubeEmbed videoId={track.youtube} title={track.title} />
+      </div>
+    )}
+
+    {track.embedUrl && (
+      <div class="mb-8 rounded-xl overflow-hidden shadow-md">
+        <iframe
+          src={track.embedUrl}
+          width="100%"
+          height="166"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          class="w-full"
+        ></iframe>
+      </div>
+    )}
+
+    {track.description && (
+      <p class="text-base-content/70 leading-relaxed mb-8 whitespace-pre-line">{track.description}</p>
+    )}
+
+    {track.links && track.links.length > 0 && (
+      <div class="card bg-base-200 border border-base-300 p-5 mb-8">
+        <h2 class="font-display font-semibold text-base mb-3">配信・購入</h2>
+        <div class="flex flex-wrap gap-3">
+          {track.links.map(link => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline btn-sm hover:btn-primary">
+              {link.label} →
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="mt-12 pt-8 border-t border-base-300">
+      <a href="/discography" class="btn btn-ghost btn-sm">← Discography 一覧に戻る</a>
+    </div>
+
+  </div>
+</BaseLayout>

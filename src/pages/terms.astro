@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+---
+
+<BaseLayout title="楽曲利用条件">
+  <section class="page-hero text-center py-16 px-4 mb-12">
+    <h1 class="font-display font-bold text-5xl text-white inline-block">Terms of Use</h1>
+    <p class="text-white/60 mt-4">楽曲利用条件</p>
+  </section>
+  
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <div class="alert alert-info mb-10">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <span>楽曲利用に関するご相談は<a href="/contact" class="underline font-medium">お問い合わせページ</a>からどうぞ。</span>
+    </div>
+
+    <div class="flex flex-col gap-6">
+
+      <div class="card bg-success/10 border border-success/30">
+        <div class="card-body">
+          <h2 class="card-title font-display text-success">許可されること（事前連絡不要）</h2>
+          <ul class="flex flex-col gap-2 mt-2 text-sm text-base-content/80">
+            <li class="flex items-start gap-2"><span class="text-success mt-0.5">◆</span><span>個人の趣味・非商用目的での使用</span></li>
+            <li class="flex items-start gap-2"><span class="text-success mt-0.5">◆</span><span>二次創作（アレンジ・歌ってみた・演奏してみた等）の非商用配布</span></li>
+            <li class="flex items-start gap-2"><span class="text-success mt-0.5">◆</span><span>動画・配信での使用（広告収益なし）</span></li>
+            <li class="flex items-start gap-2"><span class="text-success mt-0.5">◆</span><span>音楽ゲーム向け創作譜面の制作（条件有 下記の楽曲使用上の注意を参照してください。）</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-warning/10 border border-warning/30">
+        <div class="card-body">
+          <h2 class="card-title font-display text-warning">事前にご連絡ください</h2>
+          <ul class="flex flex-col gap-2 mt-2 text-sm text-base-content/80">
+            <li class="flex items-start gap-2"><span class="text-warning mt-0.5">◆</span><span>ゲーム・アプリ等への収録（商用・非商用問わず）</span></li>
+            <li class="flex items-start gap-2 ml-4"><span class="text-warning mt-0.5"><small>◆</small></span><span><small>非商用ゲームの場合、開発実態がわかる資料（SNS公式アカウントやキービジュアル等）をお送りください。</small></span></li>
+            <li class="flex items-start gap-2 ml-4"><span class="text-warning mt-0.5"><small>◆</small></span><span><small>広告収入含め、全く収益が発生しないゲームについては既存楽曲の無償提供が可能です。</small></span></li>
+            <li class="flex items-start gap-2"><span class="text-warning mt-0.5">◆</span><span>企業・法人での使用</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-error/10 border border-error/30">
+        <div class="card-body">
+          <h2 class="card-title font-display text-error">禁止事項</h2>
+          <ul class="flex flex-col gap-2 mt-2 text-sm text-base-content/80">
+            <li class="flex items-start gap-2"><span class="text-error mt-0.5">◆</span><span>楽曲の無断転載・再配布</span></li>
+            <li class="flex items-start gap-2"><span class="text-error mt-0.5">◆</span><span>政治的・宗教的なコンテンツ等への使用</span></li>
+            <li class="flex items-start gap-2"><span class="text-error mt-0.5">◆</span><span>作者の名誉・信用を損なう目的での使用</span></li>
+            <li class="flex items-start gap-2"><span class="text-error mt-0.5">◆</span><span>AIの学習データへの使用</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body">
+          <h2 class="card-title font-display">楽曲使用上の注意</h2>
+          <ul class="flex flex-col gap-2 mt-2 text-sm text-base-content/80">
+            <li class="flex items-start gap-2"><span class="text-primary mt-0.5">◆</span><span>必ず正規手段で入手した音源を使用してください。違法ダウンロード・リッピング等による音源の使用は固くお断りします。</span></li>
+            <li class="flex items-start gap-2"><span class="text-primary mt-0.5">◆</span><span>合作曲、リミックス、他サークルのアルバム等に書き下ろした楽曲の無断使用は禁止です。必ず事前にご連絡ください。</span></li>
+            <li class="flex items-start gap-2"><span class="text-primary mt-0.5">◆</span><span>ゲームに書き下ろしたオリジナル楽曲の使用は禁止です。</span></li>
+            <li class="flex items-start gap-2"><span class="text-primary mt-0.5">◆</span><span>Dance Cube（舞立方）における創作譜面の作成は一律禁止とさせていただきます。</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12 p-8 bg-base-200 rounded-2xl border border-base-300">
+      <p class="text-base-content/70 mb-4">上記に該当しないご利用・ご不明点はお気軽にお問い合わせください。</p>
+      <a href="/contact" class="btn btn-primary">お問い合わせ →</a>
+    </div>
+
+    <p class="text-xs text-base-content/40 text-center mt-6">最終更新: {new Date().getFullYear()}年</p>
+  </div>
+</BaseLayout>
