@@ -6,7 +6,7 @@
 export const SITE_CONFIG = {
   // サークル基本情報
   name: "Ultramarine Soundz",
-  description: "前身サークルを改名し、2024年に立ち上げた同人音楽サークル。\nutzboによる個人アルバムの他、コンピレーションアルバム等さまざまな作品を制作しています。",
+  description: "前身サークルを改名し、2025年に立ち上げた同人音楽サークル。\nutzboによる個人アルバムの他、コンピレーションアルバム等さまざまな作品を制作しています。",
 
   // 主催者情報
   organizer: {
