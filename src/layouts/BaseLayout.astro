@@ -128,20 +128,28 @@ const pageDesc  = description || SITE_CONFIG.description;
   <nav class="navbar bg-neutral text-neutral-content sticky top-0 z-50 shadow-lg">
     <div class="navbar-start">
       <!-- モバイルメニュー -->
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-neutral-content">
+      <div x-data="{ open: false }" class="relative lg:hidden">
+        <button
+          x-on:click="open = !open"
+          class="btn btn-ghost text-neutral-content"
+        >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
           </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
-          <li><a href="/">トップ</a></li>
-          <li><a href="/about">サークル紹介</a></li>
-          <li><a href="/discography">ディスコグラフィー</a></li>
-          <li><a href="/works">実績</a></li>
-          <li><a href="/terms">楽曲利用条件</a></li>
-          <li><a href="/links">リンク</a></li>
-          <li><a href="/contact">お問い合わせ</a></li>
+        </button>
+        <ul
+          x-show="open"
+          x-on:click.outside="open = false"
+          class="menu menu-sm absolute bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow-xl"
+          style="display: none;"
+        >
+          <li><a href="/" x-on:click="open = false">トップ</a></li>
+          <li><a href="/about" x-on:click="open = false">サークル紹介</a></li>
+          <li><a href="/discography" x-on:click="open = false">ディスコグラフィー</a></li>
+          <li><a href="/works" x-on:click="open = false">制作・提供実績</a></li>
+          <li><a href="/terms" x-on:click="open = false">楽曲利用条件</a></li>
+          <li><a href="/links" x-on:click="open = false">各種リンク・SNS</a></li>
+          <li><a href="/contact" x-on:click="open = false">お問い合わせ</a></li>
         </ul>
       </div>
       <!-- ロゴ -->
