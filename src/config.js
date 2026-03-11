@@ -27,6 +27,8 @@ export const SITE_CONFIG = {
     { label: "SoundCloud",  url: "https://soundcloud.com/utzbo" },
     { label: "Skeb",        url: "https://skeb.jp/@utzzbo" },
     { label: "bandcamp",    url: "https://utzbo.bandcamp.com/" },
+    { label: "Spotify",     url: "https://open.spotify.com/artist/2jRusHcGFTiPAmZPiErlTQ" },
+    { label: "Apple Music", url: "https://music.apple.com/jp/artist/utzbo/1750697434" },
   ],
 
   // 問い合わせ
