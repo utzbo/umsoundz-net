@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { works, allWorkTags, workCategories } from '../../../data/works.js';
+import { works, allWorkTags} from '../../../data/works.js';
 ---
 
 <BaseLayout title="Works">
@@ -52,11 +52,6 @@ import { works, allWorkTags, workCategories } from '../../../data/works.js';
               )}
               <div class="card-body p-5 min-w-0">
                 <div class="flex flex-wrap items-center gap-2 mb-1">
-                  {(Array.isArray(work.category) ? work.category : [work.category]).map(cat => (
-                    <span class="badge badge-accent badge-sm">
-                      {workCategories[cat] || cat}
-                    </span>
-                  ))}
                   <span class="text-xs text-base-content/40">{work.date}</span>
                 </div>
                 <h2 class="font-display font-semibold text-xl group-hover:text-primary transition-colors">
