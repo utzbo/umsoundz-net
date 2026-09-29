@@ -1,0 +1,70 @@
+---
+// タグ絞り込みUI
+// 絞り込み対象: [data-filter-card]（data-tags にカンマ区切りのタグ）
+// 0件表示: [data-filter-empty] / リセットボタン: [data-filter-reset]
+const { tags, total } = Astro.props;
+---
+<div class="flex flex-wrap gap-2 items-center mb-3">
+  <span class="text-sm font-medium text-base-content/60 mr-1">タグで絞り込み：</span>
+  <button id="tag-all"
+    class="badge badge-primary cursor-pointer py-3 px-3 text-sm font-medium"
+  >すべて</button>
+  {tags.map(tag => (
+    <button
+      class="tag-btn badge badge-outline cursor-pointer py-3 px-3 text-sm font-medium transition-all"
+      data-tag={tag}
+    >{tag}</button>
+  ))}
+</div>
+
+<p class="text-sm text-base-content/50 mb-4">
+  <span id="filter-count">{total}</span>件表示中
+</p>
+
+<script>
+  const allBtn   = document.getElementById('tag-all');
+  const tagBtns  = document.querySelectorAll('.tag-btn');
+  const cards    = document.querySelectorAll('[data-filter-card]');
+  const countEl  = document.getElementById('filter-count');
+  const emptyEl  = document.querySelector('[data-filter-empty]');
+  const resetBtn = document.querySelector('[data-filter-reset]');
+
+  const activeTags = new Set();
+
+  function update() {
+    const noneActive = activeTags.size === 0;
+    allBtn.classList.toggle('badge-primary', noneActive);
+    allBtn.classList.toggle('badge-outline', !noneActive);
+    tagBtns.forEach(b => {
+      const active = activeTags.has(b.dataset.tag);
+      b.classList.toggle('badge-primary', active);
+      b.classList.toggle('badge-outline', !active);
+    });
+
+    let visible = 0;
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').split(',').filter(Boolean);
+      const show = [...activeTags].every(t => cardTags.includes(t));
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = String(visible);
+    emptyEl?.classList.toggle('hidden', visible > 0);
+  }
+
+  function reset() {
+    activeTags.clear();
+    update();
+  }
+
+  allBtn.addEventListener('click', reset);
+  resetBtn?.addEventListener('click', reset);
+
+  tagBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag;
+      activeTags.has(tag) ? activeTags.delete(tag) : activeTags.add(tag);
+      update();
+    });
+  });
+</script>

@@ -1,13 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import { SITE_CONFIG } from '../config.js';
 ---
 
 <BaseLayout title="Contact">
-  <section class="page-hero text-center py-16 px-4 mb-12">
-    <h1 class="font-display font-bold text-5xl text-white inline-block">Contact</h1>
-    <p class="text-white/60 mt-4">お問い合わせ</p>
-  </section>
+  <PageHero title="Contact" subtitle="お問い合わせ" />
 
   <div class="max-w-2xl mx-auto px-4 py-16">
 

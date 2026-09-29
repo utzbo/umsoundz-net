@@ -3,21 +3,28 @@ import { SITE_CONFIG } from '../config.js';
 const { title, description } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_CONFIG.name}` : SITE_CONFIG.name;
 const pageDesc  = description || SITE_CONFIG.description;
+
+const NAV_ITEMS = [
+  { href: '/',            label: 'Top',         labelJa: 'トップ' },
+  { href: '/about',       label: 'About',       labelJa: 'サークル紹介' },
+  { href: '/discography', label: 'Discography', labelJa: 'ディスコグラフィー' },
+  { href: '/works',       label: 'Works',       labelJa: '制作・提供実績' },
+  { href: '/terms',       label: 'Terms',       labelJa: '楽曲利用条件' },
+  { href: '/links',       label: 'Links',       labelJa: '各種リンク・SNS' },
+  { href: '/contact',     label: 'Contact',     labelJa: 'お問い合わせ' },
+];
 ---
 <!DOCTYPE html>
-<html lang="ja" data-theme="ultramarine" style="background-image: none;">
+<html lang="ja" data-theme="ultramarine">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={pageDesc} />
   <title>{pageTitle}</title>
   <link rel="icon" href="/images/mark_blue.svg" type="image/svg+xml" />
-  <link rel="icon" href="/images/mark_blue.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style is:global>
     body { font-family: 'Noto Sans JP', sans-serif; }
@@ -97,8 +104,8 @@ const pageDesc  = description || SITE_CONFIG.description;
        カードスクロールエリア（ディスコ・実績ページ）
     ============================================ */
     .card-scroll-area {
-      max-height: 65vh;
-      overflow-y: scroll;
+      max-height: 45vh;
+      overflow-y: auto;
       padding-right: 6px;
     }
     .card-scroll-area::-webkit-scrollbar { width: 4px; }
@@ -106,7 +113,7 @@ const pageDesc  = description || SITE_CONFIG.description;
     .card-scroll-area::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
 
     /* ============================================
-   ページヘッダー（各ページのh1エリア）
+       ページヘッダー（各ページのh1エリア）
     ============================================ */
     .page-hero {
       background-color: #072e80 !important;
@@ -128,30 +135,16 @@ const pageDesc  = description || SITE_CONFIG.description;
   <nav class="navbar bg-neutral text-neutral-content sticky top-0 z-50 shadow-lg">
     <div class="navbar-start">
       <!-- モバイルメニュー -->
-      <div x-data="{ open: false }" class="relative lg:hidden">
-        <button
-          x-on:click="open = !open"
-          class="btn btn-ghost text-neutral-content"
-        >
+      <details id="mobile-menu" class="dropdown lg:hidden">
+        <summary class="btn btn-ghost text-neutral-content list-none [&::-webkit-details-marker]:hidden">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
           </svg>
-        </button>
-        <ul
-          x-show="open"
-          x-on:click.outside="open = false"
-          class="menu menu-sm absolute bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow-xl"
-          style="display: none;"
-        >
-          <li><a href="/" x-on:click="open = false">トップ</a></li>
-          <li><a href="/about" x-on:click="open = false">サークル紹介</a></li>
-          <li><a href="/discography" x-on:click="open = false">ディスコグラフィー</a></li>
-          <li><a href="/works" x-on:click="open = false">制作・提供実績</a></li>
-          <li><a href="/terms" x-on:click="open = false">楽曲利用条件</a></li>
-          <li><a href="/links" x-on:click="open = false">各種リンク・SNS</a></li>
-          <li><a href="/contact" x-on:click="open = false">お問い合わせ</a></li>
+        </summary>
+        <ul class="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
+          {NAV_ITEMS.map(item => <li><a href={item.href}>{item.labelJa}</a></li>)}
         </ul>
-      </div>
+      </details>
       <!-- ロゴ -->
       <a href="/" class="flex items-center gap-2 ml-1">
         <img src={SITE_CONFIG.logo} alt={SITE_CONFIG.name}
@@ -165,18 +158,14 @@ const pageDesc  = description || SITE_CONFIG.description;
 
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal gap-1 text-sm">
-        <li><a href="/" class="text-neutral-content/80 hover:text-white transition-colors">Top</a></li>
-        <li><a href="/about" class="text-neutral-content/80 hover:text-white transition-colors">About</a></li>
-        <li><a href="/discography" class="text-neutral-content/80 hover:text-white transition-colors">Discography</a></li>
-        <li><a href="/works" class="text-neutral-content/80 hover:text-white transition-colors">Works</a></li>
-        <li><a href="/terms" class="text-neutral-content/80 hover:text-white transition-colors">Terms</a></li>
-        <li><a href="/links" class="text-neutral-content/80 hover:text-white transition-colors">Links</a></li>
-        <li><a href="/contact" class="text-neutral-content/80 hover:text-white transition-colors">Contact</a></li>
+        {NAV_ITEMS.map(item => (
+          <li><a href={item.href} class="text-neutral-content/80 hover:text-white transition-colors">{item.label}</a></li>
+        ))}
       </ul>
     </div>
 
-    <div class="navbar-end pr-4">
-    </div>
+    <!-- 中身は空だが navbar-center を中央に保つために必要 -->
+    <div class="navbar-end"></div>
   </nav>
 
   <main class="flex-1">
@@ -189,17 +178,21 @@ const pageDesc  = description || SITE_CONFIG.description;
       <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col items-center gap-6">
         <p class="font-display font-bold text-2xl tracking-widest text-white">{SITE_CONFIG.name}</p>
         <nav class="flex flex-wrap justify-center gap-5 text-sm text-neutral-content/60">
-          <a href="/about"        class="hover:text-white transition-colors">About</a>
-          <a href="/discography"  class="hover:text-white transition-colors">Discography</a>
-          <a href="/works"        class="hover:text-white transition-colors">Works</a>
-          <a href="/terms"        class="hover:text-white transition-colors">Terms</a>
-          <a href="/links"        class="hover:text-white transition-colors">Links</a>
-          <a href="/contact"      class="hover:text-white transition-colors">Contact</a>
+          {NAV_ITEMS.filter(item => item.href !== '/').map(item => (
+            <a href={item.href} class="hover:text-white transition-colors">{item.label}</a>
+          ))}
         </nav>
         <p class="text-xs text-neutral-content/40">© {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script>
+    // モバイルメニュー：外側クリックで閉じる
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.addEventListener('click', e => {
+      if (mobileMenu && !mobileMenu.contains(e.target as Node)) mobileMenu.removeAttribute('open');
+    });
+  </script>
 </body>
 </html>

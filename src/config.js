@@ -18,7 +18,6 @@ export const SITE_CONFIG = {
 
   // ロゴ（public/images/ に置く。未設定時はテキスト表示）
   logo: "/images/logo.svg",
-  favicon: "/favicon.png",
 
   // SNS・外部リンク
   links: [
@@ -35,7 +34,6 @@ export const SITE_CONFIG = {
   // 問い合わせ
   contact: {
     email: "semiutsubo[at]gmail.com",
-    formUrl: "",   // Googleフォーム等のURL（使う場合）
     note: "楽曲の制作及び使用依頼、マスタリング依頼等は下記メールアドレスにお送りください。\n※現在制作・マスタリング依頼は有償のみとさせていただいております。",
   },
 };

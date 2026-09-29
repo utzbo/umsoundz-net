@@ -1,13 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE_CONFIG } from '../config.js';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout title="Terms">
-  <section class="page-hero text-center py-16 px-4 mb-12">
-    <h1 class="font-display font-bold text-5xl text-white inline-block">Terms of Use</h1>
-    <p class="text-white/60 mt-4">楽曲利用条件</p>
-  </section>
+  <PageHero title="Terms of Use" subtitle="楽曲利用条件" />
   
   <div class="max-w-3xl mx-auto px-4 py-16">
     <div class="alert alert-info mb-10">
@@ -76,6 +73,6 @@ import { SITE_CONFIG } from '../config.js';
       <a href="/contact" class="btn btn-primary">お問い合わせ →</a>
     </div>
 
-    <p class="text-xs text-base-content/40 text-center mt-6">最終更新: {new Date().getFullYear()}年</p>
+    <p class="text-xs text-base-content/40 text-center mt-6">最終更新: 2026年3月21日</p>
   </div>
 </BaseLayout>

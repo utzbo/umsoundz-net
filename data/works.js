@@ -1,6 +1,8 @@
 // ============================================
 // 実績データ
-// 実績を追加するときはオブジェクトを追加する
+// 実績を追加するときはオブジェクトを追加する（表示は日付の新しい順）
+//   externalLinks: 外部リンク（Bandcamp・Webサイト・その他）
+//   soundcloudUrl / thumbnail: 任意
 // ============================================
 export const tags = {
   commission: "楽曲提供",
@@ -21,16 +23,13 @@ export const works = [
   {
     id: "work-26-10-11",
     title: "Ruminas Rave様「TECHNICAL SCORE」マスタリング担当",
-    date: "2026-04-26",
+    date: "2026-10-11",
     tags: [tags.mastering],
     description: "アルバムのマスタリングを担当しました。",
     youtube: "HnlDlAJgVVY",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "告知ツイート", url: "https://x.com/vorunae_Runa/status/2103454485020393571?s=20" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-09-12",
@@ -39,12 +38,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「Aztec Altar(Extended Edit)」を提供させていただきました。",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "アルバムページ", url: "https://sunset.getonpictochat.com/2026/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-05-30",
@@ -53,12 +49,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「九龍霓虹街」を提供させていただきました。",
     youtube: "UW9txKkCCUI",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Steam", url: "https://store.steampowered.com/app/4733210/Act__Demo/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-05-01",
@@ -67,12 +60,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「Secret Chaser」を提供させていただきました。",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "告知ツイート", url: "https://x.com/overecho_jp/status/2050138157228900713?s=20" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-04-26-3",
@@ -81,12 +71,9 @@ export const works = [
     tags: [tags.remix, tags.mastering, tags.doujin, tags.touhou],
     description: "「Blooming Ghost」の提供とマスタリングを担当しました。\n原曲：上海アリス幻樂団 - 幽雅に咲かせ、墨染の桜 ～ Border of Life",
     youtube: "RmJICln5Z3A",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "メロンブックス", url: "https://www.melonbooks.co.jp/detail/detail.php?product_id=3602575" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-04-26-2",
@@ -95,12 +82,9 @@ export const works = [
     tags: [tags.commission, tags.doujin],
     description: "「Vermillion」を提供させていただきました。",
     youtube: "6A3H_B8LEm0",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "bandcamp", url: "https://kuroshiro.bandcamp.com/album/kuroshiro-colors-red" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-04-26-1",
@@ -109,12 +93,9 @@ export const works = [
     tags: [tags.remix, tags.doujin],
     description: "「techno-pain(utzbo remix)」を提供させていただきました。",
     youtube: "o7_MOs-5mAk",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://tawminus50.wixsite.com/cite/losttechnopolis-if-ep" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-04-19-2",
@@ -123,12 +104,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「花一匁」を提供させていただきました。※etowa氏との合作",
     youtube: "ZBpEMHJek7Y",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "GrounbreakinG", url: "https://gdbg.tv/release/2025" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-04-19-1",
@@ -137,12 +115,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「Secret Chaser(Director's Cut)」を提供させていただきました。",
     youtube: "S7mT4zEiTe4",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "GrounbreakinG", url: "https://gdbg.tv/release/2025" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-02-12",
@@ -151,12 +126,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「Chunlian」を提供させていただきました。",
     youtube: "oqWKOnQufmU",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "公式サイト", url: "https://www.rotaeno.com/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-26-01-30",
@@ -165,12 +137,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「花一匁」を提供させていただきました。\n※etowa氏との合作",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "告知ツイート", url: "https://x.com/overecho_jp/status/2017160876458176541?s=20" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-10-26-2",
@@ -179,12 +148,9 @@ export const works = [
     tags: [tags.commission, tags.doujin],
     description: "「Impulse」を提供させていただきました。",
     youtube: "ms7oVen6bDA",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://kodamasoft.net/releases/eclectic-resonance-uprising-3" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-10-26",
@@ -193,12 +159,9 @@ export const works = [
     tags: [tags.contest, tags.remix, tags.doujin],
     description: "「INFiNiTE ENERZY -Overdoze- (utzbo Remix)」を採用していただきました。",
     youtube: "8xHsJlICPM8",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://rmxez.netlify.app/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-10-07",
@@ -207,12 +170,9 @@ export const works = [
     tags: [tags.contest, tags.rhythm_game, tags.arcade],
     description: "「SOUND VOLTEX13周年記念！キャラクターテーマ楽曲コンテスト」にて「FLAVOR-G」を採用していただきました。",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "SOUND VOLTEX公式サイト", url: "https://p.eagate.573.jp/game/sdvx/sv/p/floor/original/32/index.html" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-05-06",
@@ -221,12 +181,9 @@ export const works = [
     tags: [tags.remix, tags.doujin, tags.touhou],
     description: "「Hidden Gateway」を提供させていただきました。\n原曲：上海アリス幻樂団 - 秘匿されたフォーシーズンズ / 秘神マターラ ～ Hidden Star in All Seasons.",
     youtube: "tgIVZm9JuFE",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Bandcamp", url: "https://kodamasounds.bandcamp.com/album/gensokyo-party-vol-6-border-in-stasis" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-04-27-2",
@@ -235,12 +192,9 @@ export const works = [
     tags: [tags.remix, tags.mastering, tags.doujin, tags.touhou],
     description: "「Shang-hai Hyperdrive」の提供とマスタリングを担当しました。\n原曲：上海アリス幻樂団 - 上海紅茶館 ～ Chinese Tea / 明治十七年の上海アリス",
     youtube: "bPciiTGWHok",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "メロンブックス", url: "https://www.melonbooks.co.jp/detail/detail.php?product_id=2946194" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-04-27",
@@ -249,12 +203,9 @@ export const works = [
     tags: [tags.commission, tags.doujin],
     description: "「Bathyscion」を提供させていただきました。",
     youtube: "H497RtI2UoY",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://str3.org/strl_0051/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-04-20",
@@ -263,12 +214,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「影縫」を提供させていただきました。",
     youtube: "drdgs4H8Uj0",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "GrounbreakinG", url: "https://gdbg.tv/release/2024" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-04-05",
@@ -277,12 +225,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「HANAMI」を提供させていただきました。",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "BE-MUSIC Special Selection 2024", url: "https://hpx.getonpictochat.com/bmss/2024/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-25-03-04",
@@ -291,12 +236,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「Dynasty of Extinction」「Kung-fu Fantasia」「九龍霓虹街」の3曲を提供させていただきました。\n※「Dynasty of Extinction」はparaneumann氏との合作",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "ELLIA公式サイト", url: "https://ellia-console.teamarcstar.com/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-10-27-2",
@@ -305,12 +247,9 @@ export const works = [
     tags: [tags.remix, tags.mastering, tags.doujin],
     description: "「VORATILITY (utzbo Remix)」の提供及びマスタリングを担当しました。",
     youtube: "OW4Cdr_skk0",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Booth", url: "https://taro0430.booth.pm/items/6249368" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-10-27",
@@ -319,12 +258,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.doujin],
     description: "「花鳥暁日」を提供させていただきました。\n※Reku Mochizuki氏との合作",
     youtube: "lyP05-zWXO4",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "シノビスラッシュ公式サイト", url: "https://drossel.studio/goods" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-05-30",
@@ -333,12 +269,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「Dynasty of Extinction」を提供させていただきました。\n※paraneumann氏との合作",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Lanota公式サイト", url: "https://noxygames.com/lanota/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-04-28-2",
@@ -347,12 +280,9 @@ export const works = [
     tags: [tags.remix, tags.doujin],
     description: "4rcad1a(utzbo Remix)を提供させていただきました。",
     youtube: "8jP30pj4Gik",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://tawminus50.wixsite.com/cite/project-arcadia" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-04-28",
@@ -361,12 +291,9 @@ export const works = [
     tags: [tags.contest, tags.remix, tags.doujin],
     description: "「雲雀(utzbo Remix)」を採用していただきました。",
     youtube: "DRXqOCTREYQ",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://godremixer.tumblr.com/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-04-23",
@@ -375,12 +302,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「花鳥暁日」を提供させていただきました。\n※Reku Mochizuki氏との合作",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "シノビスラッシュ公式サイト", url: "https://drossel.studio/shinobi" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-24-04-21",
@@ -389,12 +313,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「Dynasty of Extinction -Brachiosaurus Strike Back-」を提供させていただきました。\n※paraneumann氏との合作",
     youtube: "-KNQ-gBLIAQ",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "GrounbreakinG", url: "https://gdbg.tv/release/2023" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-23-10-29-3",
@@ -403,10 +324,7 @@ export const works = [
     tags: [tags.remix, tags.mastering, tags.doujin],
     description: "「On1y(uzb Remix)」の提供及びマスタリングを担当させていただきました。",
     youtube: "sQSAtUL0oMs",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [],
-    thumbnail: "",
   },
   {
     id: "work-23-10-29-2",
@@ -415,12 +333,9 @@ export const works = [
     tags: [tags.commission, tags.doujin],
     description: "「彩灯巷子」を提供させていただきました。",
     youtube: "0BRCfs9pq_k",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Booth", url: "https://nenotani.booth.pm/items/5193798" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-23-10-29",
@@ -429,12 +344,9 @@ export const works = [
     tags: [tags.remix, tags.doujin, tags.touhou],
     description: "「Millennium Lunatic Dancer」を提供させていただきました。\n原曲：上海アリス幻樂団 - 千年幻想郷 ～ History of the Moon",
     youtube: "rthWG-Ass0Q",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "特設サイト", url: "https://astralelysium1.tumblr.com/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-23-04-23",
@@ -443,12 +355,9 @@ export const works = [
     tags: [tags.commission, tags.doujin, tags.rhythm_game],
     description: "「九龍霓虹街:加長版」を提供させていただきました。",
     youtube: "tezF2_9KA60",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "GrounbreakinG", url: "https://gdbg.tv/release/2022/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-22-04-24",
@@ -457,12 +366,9 @@ export const works = [
     tags: [tags.remix, tags.doujin],
     description: "「Hayate (uzb Remix)」を提供させていただきました。",
     youtube: "rYux6j2EJ2Y",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "Bandcamp", url: "https://moviika.bandcamp.com/album/hayate-ep" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-22-02-17",
@@ -471,12 +377,9 @@ export const works = [
     tags: [tags.commission, tags.rhythm_game, tags.application],
     description: "「Secret Order」を提供させていただきました。",
     youtube: "",
-    soundcloudUrl: "",
-    // 外部リンク（Bandcamp・Webサイト・その他）を配列で管理
     externalLinks: [
       { label: "WAVEAT公式サイト", url: "https://waveat.a-zero.net/" },
     ],
-    thumbnail: "",
   },
   {
     id: "work-21-01-29",
@@ -485,10 +388,8 @@ export const works = [
     tags: [tags.contest, tags.rhythm_game, tags.application],
     description: "「Secret Order」を採用していただきました。",
     youtube: "",
-    soundcloudUrl: "",
     externalLinks: [],
-    thumbnail: "",
   },
-];
+].sort((a, b) => b.date.localeCompare(a.date));
 
 export const allWorkTags = [...new Set(works.flatMap(w => w.tags))].sort();

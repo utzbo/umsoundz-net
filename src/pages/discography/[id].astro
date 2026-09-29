@@ -24,12 +24,7 @@ const { track } = Astro.props;
     </div>
 
     <div class="mb-8">
-      <div class="flex items-center gap-2 mb-3">
-        <span class={`badge ${track.type === 'original' ? 'badge-primary' : track.type === 'arrange' ? 'badge-secondary' : 'badge-accent'}`}>
-          {track.type === 'original' ? 'オリジナル' : track.type === 'arrange' ? 'アレンジ' : '楽曲提供'}
-        </span>
-        <span class="text-sm text-base-content/50">{track.date}</span>
-      </div>
+      <p class="text-sm text-base-content/50 mb-3">{track.date}</p>
       <h1 class="font-bold text-4xl leading-tight" style="font-family: 'Noto Sans JP', sans-serif;">{track.title}</h1>
       <div class="flex flex-wrap gap-2 mt-4">
         {track.tags.map(tag => (

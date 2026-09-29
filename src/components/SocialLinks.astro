@@ -1,0 +1,12 @@
+---
+import { SITE_CONFIG } from '../config.js';
+const { class: className = '' } = Astro.props;
+---
+<div class={`flex flex-wrap gap-3 ${className}`}>
+  {SITE_CONFIG.links.map(link => (
+    <a href={link.url} target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline hover:btn-primary transition-all">
+      {link.label}
+    </a>
+  ))}
+</div>
