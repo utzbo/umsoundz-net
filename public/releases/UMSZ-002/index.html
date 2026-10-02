@@ -1,0 +1,2658 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="slash" data-animations="char-reveal" data-hero-anim>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="only dark">
+  <title>ORIENTAL RADIANCE Vol.2 | Orientalcore Compilation Album | Ultramarine Soundz</title>
+  <meta name="description" content="Ultramarine Soundz / Orientalcore Compilation Album / ORIENTAL RADIANCE Vol.2 / 2026/10/25 2026 M3秋 第一展示場 K-18a 「Ultramarine Soundz」 / Event: ￥2,500 Shop(CD): ￥3,000(+tax) Shop(DL): ￥2,500" />
+  <meta property="og:title" content="ORIENTAL RADIANCE Vol.2 | Orientalcore Compilation Album | Ultramarine Soundz" />
+  <meta property="og:description" content="Ultramarine Soundz / Orientalcore Compilation Album / ORIENTAL RADIANCE Vol.2 / 2026/10/25 2026 M3秋 第一展示場 K-18a 「Ultramarine Soundz」 / Event: ￥2,500 Shop(CD): ￥3,000(+tax) Shop(DL): ￥2,500" />
+  <meta property="og:image" content="./images/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ORIENTAL RADIANCE Vol.2 | Orientalcore Compilation Album | Ultramarine Soundz" />
+  <meta name="twitter:description" content="Ultramarine Soundz / Orientalcore Compilation Album / ORIENTAL RADIANCE Vol.2 / 2026/10/25 2026 M3秋 第一展示場 K-18a 「Ultramarine Soundz」 / Event: ￥2,500 Shop(CD): ￥3,000(+tax) Shop(DL): ￥2,500" />
+  <meta name="twitter:image" content="./images/og-image.png" />
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <link rel="preload" as="image" imagesrcset="./images/art-0-960.webp 960w, ./images/art-0-1920.webp 1920w, ./images/art-0.webp 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"></noscript>
+  <style>
+/* ユーザー設定カラー・フォント：CSS 変数として注入することで lp-page.scss 側で一元管理できる */
+:root {
+  /* Android の Force Dark を無効化しつつ、背景色の明度に合わせたスキームを渡す。
+     only を付けないと申告のみ扱いになり Force Dark が素通りしてしまう */
+  color-scheme: only dark;
+  --lp-bg: #121921;
+  --lp-text: #e9ebed;
+  --lp-accent: #4c7fe6;
+  --lp-font-heading: 'Outfit', sans-serif;
+  --lp-font-body: 'Outfit', sans-serif;
+  --lp-bg-blur: 16px;
+  --lp-bg-blend-mode: normal;
+  --lp-bg-colorize-bg: transparent;
+  --lp-bg-opacity: 0.3;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--lp-font-body);
+  color: var(--lp-text);
+  background-color: var(--lp-bg);
+  min-height: 100vh;
+}
+@charset "UTF-8";
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 28px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-15: 60px;
+  --fs-xxs: 11px;
+  --fs-xs: clamp(12px, 0.4vw + 9.5px, 13px);
+  --fs-sm: clamp(14px, 0.5vw + 11px, 15px);
+  --fs-md: clamp(16px, 0.5vw + 13px, 17px);
+  --fs-lg: clamp(17px, 0.8vw + 13px, 20px);
+  --fs-xl: clamp(18px, 1vw + 14px, 24px);
+  --fs-2xl: clamp(22px, 1.5vw + 13px, 28px);
+  --fs-3xl: clamp(28px, 2vw + 12px, 32px);
+  --fs-4xl: clamp(32px, 2.5vw + 14px, 48px);
+  --fs-5xl: clamp(38px, 3vw + 14px, 42px);
+  --fs-6xl: clamp(48px, 4vw + 14px, 52px);
+  --line-height-xs: 1.15;
+  --line-height-sm: 1.4;
+  --line-height-md: 1.6;
+  --line-height-lg: 1.75;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --z-bg: -1;
+  --z-base: 1;
+  --lp-height-globalheader: 56px;
+  --lp-text-secondary: color-mix(in srgb, var(--lp-text) 70%, transparent);
+  --lp-border: color-mix(in srgb, var(--lp-text) 16%, transparent);
+}
+
+.page-root {
+  width: 100%;
+  background-color: var(--lp-bg);
+  color: var(--lp-text);
+  font-size: var(--fs-md);
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: var(--lp-bg-colorize-bg, transparent);
+  --blur-scale: 0.5;
+}
+@media (min-width: 768px) {
+  .page-bg {
+    --blur-scale: 0.75;
+  }
+}
+@media (min-width: 1280px) {
+  .page-bg {
+    --blur-scale: 1;
+  }
+}
+.page-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: var(--lp-bg-opacity, 0.3);
+  filter: blur(calc(var(--lp-bg-blur, 0px) * var(--blur-scale)));
+  mix-blend-mode: var(--lp-bg-blend-mode, normal);
+  transform: scale(1.05);
+}
+
+.page-container {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  margin-inline: var(--sp-5);
+  padding-block: var(--sp-10);
+}
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: clamp(720px, 82vw, 992px);
+  }
+}
+
+.global-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 400;
+  height: var(--lp-height-globalheader);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: color-mix(in srgb, var(--lp-bg) 75%, transparent);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.global-header.is-visible {
+  transform: translateY(0);
+}
+
+.global-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 var(--sp-6);
+  gap: var(--sp-4);
+}
+
+.global-header-title {
+  font-family: var(--lp-font-heading);
+  font-size: var(--fs-md);
+  font-weight: bold;
+  color: var(--lp-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.global-header-organization {
+  font-size: var(--fs-sm);
+  color: var(--lp-text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  min-width: 0;
+  transition: opacity 0.15s ease;
+  display: none;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .global-header-organization {
+    display: block;
+  }
+}
+
+.global-header-store-button {
+  display: inline-block;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--lp-accent);
+  border-radius: var(--radius-full);
+  color: var(--lp-bg);
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.global-header-store-button:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.global-header-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-2);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lp-text);
+  flex-shrink: 0;
+  margin-inline: calc(var(--sp-2) * -1);
+}
+@media (min-width: 768px) {
+  .global-header-menu-btn {
+    display: none;
+  }
+}
+
+.global-header-menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 22px;
+}
+.global-header-menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.global-header-menu-btn[aria-expanded=true] .global-header-menu-icon span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.global-header-menu-btn[aria-expanded=true] .global-header-menu-icon span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.global-header-menu-btn[aria-expanded=true] .global-header-menu-icon span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.global-header-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: color-mix(in srgb, var(--lp-bg) 96%, transparent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.global-header-overlay.is-open {
+  display: flex;
+  animation: overlayFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.global-header-overlay.is-open .global-header-overlay-nav {
+  animation: overlayContentIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes overlayContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.global-header-overlay-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+.global-header-overlay-link {
+  display: block;
+  font-family: var(--lp-font-heading);
+  font-size: var(--fs-2xl);
+  color: var(--lp-text);
+  text-decoration: none;
+}
+
+#overview,
+#store,
+#intro,
+#demo,
+#tracklist,
+#credits {
+  scroll-margin-top: calc(var(--lp-height-globalheader) + var(--sp-4));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-animations=fade-up] [data-animate=heading] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+[data-animations=fade-up] [data-animate=heading].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-animations=wipe] [data-animate=heading] .heading-inner {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+  }
+  [data-animations=wipe] [data-animate=heading] .heading-inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--lp-text);
+    transform: translateX(-101%);
+  }
+  [data-animations=wipe] [data-animate=heading].is-visible .heading-inner {
+    transition: color 0s 0.35s;
+    color: inherit;
+  }
+  [data-animations=wipe] [data-animate=heading].is-visible .heading-inner::before {
+    animation: wipeIn 0.35s cubic-bezier(0.65, 0, 0.35, 1) forwards, wipeOut 0.35s cubic-bezier(0.65, 0, 0.35, 1) 0.35s forwards;
+  }
+}
+
+@keyframes wipeIn {
+  from {
+    transform: translateX(-101%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes wipeOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(101%);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-animations=char-reveal] [data-animate=heading] .heading-inner {
+    display: inline-block;
+  }
+  [data-animations=char-reveal] [data-animate=heading] .heading-inner .char {
+    display: inline-block;
+    opacity: 0;
+  }
+  [data-animations=char-reveal] [data-animate=heading].is-visible .heading-inner .char {
+    animation: charReveal 0.12s ease-out forwards;
+    animation-delay: calc(var(--char-index, 0) * 0.04s);
+  }
+}
+
+@keyframes charReveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.25em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-overlay.is-open {
+  display: flex;
+}
+.lightbox-overlay .lightbox-img {
+  max-width: min(90vw, 1200px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.lightbox-overlay .lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.15s ease;
+}
+.lightbox-overlay .lightbox-close:hover {
+  color: #fff;
+}
+.lightbox-overlay .lightbox-prev,
+.lightbox-overlay .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.lightbox-overlay .lightbox-prev:hover,
+.lightbox-overlay .lightbox-next:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.lightbox-overlay .lightbox-prev {
+  left: 20px;
+}
+.lightbox-overlay .lightbox-next {
+  right: 20px;
+}
+.lightbox-overlay .lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-group(lightbox-hero) {
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-old(lightbox-hero),
+::view-transition-new(lightbox-hero) {
+  animation-duration: 0.35s;
+}
+
+.lightbox-img.lb-nav-next {
+  animation: lb-slide-from-right 0.22s ease;
+}
+
+.lightbox-img.lb-nav-prev {
+  animation: lb-slide-from-left 0.22s ease;
+}
+
+@keyframes lb-slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+@keyframes lb-slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+.overviewArtwork {
+  width: 100%;
+  min-width: 0;
+}
+.overviewArtwork .artworkMainWrapper {
+  perspective: 800px;
+  width: 90%;
+  margin-inline: auto;
+}
+.overviewArtwork .artworkMainBtn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  filter: drop-shadow(6px 14px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@media (max-width: 500px) {
+  .overviewArtwork .artworkMainBtn {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+.overviewArtwork .artworkMainBtn:hover {
+  transform: rotateY(-8deg);
+  filter: drop-shadow(12px 16px 24px rgba(0, 0, 0, 0.45));
+}
+.overviewArtwork .artworkMainBtn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  background: linear-gradient(125deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.18) 50%, transparent 65%, transparent 100%), linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 65%);
+  background-size: 300% 300%, 100% 100%;
+  background-position: -50% -50%, 0% 0%;
+  transition: background-position 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.overviewArtwork .artworkMainBtn:hover::before {
+  background-position: 150% 150%, 0% 0%;
+}
+.overviewArtwork .artworkMainBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  border-radius: 0 2px 2px 0;
+}
+.overviewArtwork .artworkMainBtn img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.overviewArtwork .artworkThumbnails {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-7);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.overviewArtwork .artworkThumbnails::-webkit-scrollbar {
+  display: none;
+}
+.overviewArtwork .artworkThumbBtn {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  border: 2px solid transparent;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+.overviewArtwork .artworkThumbBtn:hover {
+  border-color: var(--lp-accent);
+  opacity: 0.9;
+}
+.overviewArtwork .artworkThumbBtn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--lp-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-base);
+  opacity: 0.4;
+}
+
+.overview {
+  display: grid;
+  gap: var(--sp-8);
+  padding-block: var(--sp-10);
+}
+@media (min-width: 768px) {
+  .overview {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .overview {
+    gap: var(--sp-12);
+  }
+}
+.overview .overviewMeta {
+  flex: 1;
+}
+.overview .release-type {
+  margin-bottom: var(--sp-1);
+}
+.overview .title {
+  font-size: var(--fs-3xl);
+  line-height: var(--line-height-sm);
+  font-family: var(--lp-font-heading);
+}
+.overview .org {
+  margin-top: var(--sp-1);
+}
+.overview .catalogNumber {
+  margin-top: var(--sp-1);
+  font-size: var(--fs-sm);
+  color: var(--lp-text-secondary);
+}
+.overview .overviewItem {
+  margin-top: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.overview .overviewLabel {
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  color: var(--lp-accent);
+  text-transform: uppercase;
+}
+.overview a {
+  color: var(--lp-accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+.overview a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.intro {
+  display: grid;
+  gap: var(--sp-5);
+}
+@media (min-width: 768px) {
+  .intro {
+    gap: var(--sp-10);
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.intro {
+  padding-block: var(--sp-10);
+}
+.intro .intro-title {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .intro .intro-title {
+    font-size: var(--fs-5xl);
+  }
+}
+
+.intro--first {
+  display: block;
+  text-align: center;
+}
+.intro--first .intro-title {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .intro--first .intro-title {
+    font-size: var(--fs-5xl);
+  }
+}
+.intro--first .intro-title {
+  margin-bottom: var(--sp-5);
+}
+.intro--first .intro-description {
+  max-width: 70ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.intro-body > * + * {
+  margin-top: var(--sp-5);
+}
+
+.intro-description {
+  line-height: var(--line-height-lg);
+}
+
+.intro-subheading {
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  line-height: var(--line-height-md);
+  font-family: var(--lp-font-heading);
+}
+
+.store {
+  padding-block: var(--sp-10);
+}
+.store .store-heading {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .store .store-heading {
+    font-size: var(--fs-5xl);
+  }
+}
+.store .store-heading {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+.store .store-sub-heading {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  text-align: center;
+  margin-top: var(--sp-8);
+  margin-bottom: var(--sp-5);
+  font-family: var(--lp-font-heading);
+}
+@media (min-width: 768px) {
+  .store .store-sub-heading {
+    font-size: var(--fs-xl);
+  }
+}
+
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  justify-content: center;
+}
+.store-buttons .store-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6em;
+  padding: var(--sp-2) var(--sp-4);
+  background-color: var(--lp-accent, color-mix(in srgb, var(--lp-text) 20%, transparent));
+  color: var(--lp-bg);
+  text-decoration: none;
+  font-size: var(--fs-base);
+  border-radius: var(--radius-full);
+  text-align: center;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.store-buttons .store-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.share-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  justify-content: center;
+  margin-top: var(--sp-12);
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--lp-accent);
+  color: var(--lp-accent);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.share-btn svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.share-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.demo {
+  padding-block: var(--sp-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.demo-player {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-lg);
+}
+
+.demo-player-youtube {
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.tracklist {
+  display: grid;
+  gap: var(--sp-5);
+}
+@media (min-width: 768px) {
+  .tracklist {
+    gap: var(--sp-10);
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.tracklist {
+  padding-block: var(--sp-10);
+}
+.tracklist .tracklist-heading {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .tracklist .tracklist-heading {
+    font-size: var(--fs-5xl);
+  }
+}
+.tracklist .tracks {
+  display: flex;
+  flex-direction: column;
+  counter-reset: track-num;
+}
+.tracklist .track {
+  display: flex;
+  gap: var(--sp-4);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--lp-border);
+  counter-increment: track-num;
+}
+.tracklist .track:last-child {
+  border-bottom: none;
+}
+.tracklist .track::before {
+  content: counter(track-num, decimal-leading-zero);
+  font-size: var(--fs-lg);
+  min-width: 1.5em;
+  flex-shrink: 0;
+  color: var(--lp-accent, color-mix(in srgb, var(--lp-text) 30%, transparent));
+}
+@media (min-width: 768px) {
+  .tracklist .track::before {
+    font-size: var(--fs-xl);
+  }
+}
+.tracklist .track-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.tracklist .track-title {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  display: block;
+}
+.tracklist .track-artist {
+  display: block;
+  color: var(--lp-text-secondary);
+  font-size: var(--fs-sm);
+  white-space: pre-line;
+}
+
+.information {
+  display: grid;
+  gap: var(--sp-5);
+}
+@media (min-width: 768px) {
+  .information {
+    gap: var(--sp-10);
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.information {
+  padding-block: var(--sp-10);
+}
+.information .information-heading {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .information .information-heading {
+    font-size: var(--fs-5xl);
+  }
+}
+
+.information-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.information-subheading {
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  line-height: var(--line-height-sm);
+  font-family: var(--lp-font-heading);
+}
+
+.information-text {
+  line-height: var(--line-height-lg);
+}
+.information-text a {
+  color: var(--lp-accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+.information-text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.information-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.credits {
+  display: grid;
+  gap: var(--sp-5);
+}
+@media (min-width: 768px) {
+  .credits {
+    gap: var(--sp-10);
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.credits {
+  padding-block: var(--sp-10);
+}
+.credits .credits-title {
+  font-size: var(--fs-3xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  .credits .credits-title {
+    font-size: var(--fs-5xl);
+  }
+}
+
+.credits-list {
+  display: grid;
+  gap: var(--sp-4);
+}
+.credits-list .credits-item {
+  display: grid;
+  gap: var(--sp-1);
+}
+@media (min-width: 768px) {
+  .credits-list .credits-item {
+    gap: var(--sp-4);
+    grid-template-columns: 1fr 1.25fr;
+  }
+}
+.credits-list .credits-role {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+@media (min-width: 768px) {
+  .credits-list .credits-role::after {
+    content: "";
+    background-color: var(--lp-border);
+    height: 1px;
+    flex: 1;
+  }
+}
+.credits-list .credits-name {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  line-height: var(--line-height-md);
+}
+.credits-list .credits-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-left: var(--sp-2);
+  position: relative;
+  top: -0.15em;
+}
+.credits-list .credits-url {
+  border: 1px solid var(--lp-accent);
+  color: var(--lp-accent);
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-xs);
+  line-height: var(--line-height-xs);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.credits-list .credits-url:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.global-footer {
+  text-align: center;
+  padding: var(--sp-10) var(--sp-5);
+  border-top: 1px solid var(--lp-border);
+}
+.global-footer .footer-logo {
+  margin-bottom: var(--sp-4);
+}
+.global-footer .footer-logo img {
+  max-width: 200px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  object-fit: contain;
+}
+.global-footer .footer-copyright {
+  font-size: var(--fs-sm);
+  color: var(--lp-text-secondary);
+  margin-bottom: var(--sp-4);
+}
+.global-footer .footer-copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+.global-footer .footer-copyright a:hover {
+  text-decoration: underline;
+}
+.global-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+.global-footer .footer-link-btn {
+  border: 1px solid var(--lp-accent);
+  color: var(--lp-accent);
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  line-height: var(--line-height-xs);
+}
+.global-footer .footer-credit {
+  font-size: var(--fs-xs);
+  color: var(--lp-text-secondary);
+  opacity: 0.75;
+}
+.global-footer .footer-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+.global-footer .footer-credit a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.toc {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: none;
+}
+@media (min-width: 768px) {
+  .toc {
+    display: block;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .toc {
+    padding-left: 0;
+  }
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--sp-3);
+}
+
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--lp-text);
+  text-decoration: none;
+}
+
+.toc-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--lp-accent);
+  opacity: 0.3;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .toc:hover .toc-dot {
+    opacity: 0.5;
+  }
+}
+.toc-link:hover .toc-dot {
+  opacity: 0.75;
+}
+
+.toc-link.is-active .toc-dot {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.toc-label {
+  font-family: var(--lp-font-body);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+@media (min-width: 1280px) {
+  .toc-label {
+    max-width: 140px;
+    opacity: 0.4;
+  }
+}
+
+@media (min-width: 768px) {
+  .toc:hover .toc-label {
+    max-width: 160px;
+    opacity: 0.75;
+  }
+  .toc:hover .toc-link.is-active .toc-label {
+    opacity: 1;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .toc-link:hover .toc-label {
+    opacity: 0.75;
+  }
+}
+@media (min-width: 1280px) {
+  .toc-link.is-active .toc-label {
+    max-width: 160px;
+    opacity: 1;
+    font-weight: bold;
+  }
+}
+
+@keyframes animZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+[data-theme=overture] .hero-root {
+  position: relative;
+  height: 250vh;
+  height: 250dvh;
+}
+[data-theme=overture] .hero-root--empty {
+  height: 100vh;
+  height: 100dvh;
+}
+[data-theme=overture] .hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: var(--lp-bg);
+}
+[data-theme=overture] .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(15% 10% 15% 10% round 24px);
+}
+[data-theme=overture][data-hero-anim] .hero-img {
+  opacity: 0;
+  transform: scale(1.25);
+}
+[data-theme=overture][data-hero-anim] .hero-img.isLoaded {
+  animation: animZoomOut 1.25s ease-in-out forwards;
+}
+[data-theme=overture] .hero-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+[data-theme=overture] .hero-placeholder-text {
+  font-size: var(--fs-sm);
+  text-align: center;
+  line-height: var(--line-height-md);
+  color: var(--lp-text-secondary);
+}
+[data-theme=overture] .hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--sp-6);
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  [data-theme=overture] .hero-text {
+    padding: var(--sp-10);
+  }
+}
+[data-theme=overture] .hero-title {
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 992px) {
+  [data-theme=overture] .hero-title {
+    font-size: var(--fs-2xl);
+  }
+}
+[data-theme=overture] .hero-org {
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-1);
+}
+[data-theme=overture] .hero-releaseType {
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-1);
+}
+[data-theme=overture] .hero-catalogNumber {
+  font-size: var(--fs-xs);
+  margin-top: var(--sp-1);
+}
+[data-theme=overture] .hero-scrollSign {
+  position: absolute;
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--lp-text);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: var(--fs-xs);
+  transform: rotate(90deg);
+  transform-origin: right top;
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  [data-theme=overture] .hero-scrollSign {
+    right: var(--sp-10);
+    bottom: var(--sp-10);
+  }
+}
+[data-theme=overture] .hero-scrollSign svg {
+  display: block;
+}
+
+@keyframes animZoomOutRotate {
+  from {
+    opacity: 0;
+    transform: scale(1.25) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+  }
+}
+[data-theme=mockup] .hero-container {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lp-bg);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3), inset 0 0 200px rgba(0, 0, 0, 0.15);
+}
+[data-theme=mockup][data-hero-anim] .mockup-container {
+  animation: animZoomOutRotate 1.25s ease-in-out forwards;
+}
+[data-theme=mockup] .mockup-container {
+  position: relative;
+  width: 90vw;
+  transform: rotate(-12deg);
+  height: 84.375vw;
+}
+@media (min-width: 768px) {
+  [data-theme=mockup] .mockup-container {
+    width: 75vw;
+    height: 70.3125vw;
+  }
+}
+@media (min-width: 992px) {
+  [data-theme=mockup] .mockup-container {
+    width: 65vw;
+    height: 60.9375vw;
+  }
+}
+[data-theme=mockup] .mockup-container.mockup-container--sleeve {
+  width: 100vw;
+  height: 93.75vw;
+}
+@media (min-width: 768px) {
+  [data-theme=mockup] .mockup-container.mockup-container--sleeve {
+    width: 85vw;
+    height: 79.6875vw;
+  }
+}
+@media (min-width: 992px) {
+  [data-theme=mockup] .mockup-container.mockup-container--sleeve {
+    width: 75vw;
+    height: 70.3125vw;
+  }
+}
+@media (min-width: 1280px) {
+  [data-theme=mockup] .mockup-container.mockup-container--sleeve {
+    width: 65vw;
+    height: 60.9375vw;
+  }
+}
+[data-theme=mockup] .mockup-container .mockup-case {
+  position: absolute;
+  width: 100%;
+}
+[data-theme=mockup] .mockup-container .mockup-art {
+  background-color: #555;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 70.5%;
+  padding-top: 70.5%;
+  top: 12.5%;
+  left: 17%;
+}
+[data-theme=mockup] .hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: var(--mockup-typo-opacity, 0.25);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+[data-theme=mockup] .hero-text-title {
+  font-size: 20vw;
+  font-family: var(--lp-font-heading);
+  white-space: nowrap;
+  line-height: 1;
+}
+@media (min-width: 576px) {
+  [data-theme=mockup] .hero-text-title {
+    font-size: var(--hero-title-fs);
+  }
+}
+@media (min-width: 1600px) {
+  [data-theme=mockup] .hero-text-title {
+    font-size: 14rem;
+  }
+}
+[data-theme=mockup] .hero-text-title-top {
+  margin-top: -0.25em;
+}
+[data-theme=mockup] .hero-text-title-bottom {
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: -0.25em;
+}
+[data-theme=mockup] .hero-text-poetry {
+  width: 100%;
+  text-align: center;
+}
+[data-theme=mockup] .hero-text-poetry p {
+  max-width: 70vw;
+  margin: 0 auto;
+  font-size: var(--fs-xxs);
+  line-height: var(--line-height-md);
+}
+[data-theme=mockup] .hero-text-subtle {
+  position: absolute;
+  top: var(--sp-8);
+  left: var(--sp-6);
+  right: var(--sp-6);
+  z-index: 2;
+  opacity: var(--mockup-typo-opacity, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  pointer-events: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  [data-theme=mockup] .hero-text-subtle {
+    left: var(--sp-10);
+    right: var(--sp-10);
+  }
+}
+[data-theme=mockup] .hero-text-subtle-title {
+  font-family: var(--lp-font-heading);
+  font-weight: bold;
+  font-size: var(--fs-xl);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  [data-theme=mockup] .hero-text-subtle-title {
+    font-size: var(--fs-2xl);
+  }
+}
+[data-theme=mockup] .hero-text-subtle-org {
+  font-size: var(--fs-xxs);
+  opacity: 0.7;
+}
+[data-theme=mockup] .hero-text-subtle-poetry {
+  font-size: var(--fs-xxs);
+  max-width: 50ch;
+}
+[data-theme=mockup] .hero-text-subtle-poetry p {
+  margin: 0;
+  line-height: var(--line-height-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0.6;
+}
+
+[data-theme=mockup] .overview {
+  display: grid;
+  gap: var(--sp-15);
+  padding-block: var(--sp-10);
+}
+@media (min-width: 768px) {
+  [data-theme=mockup] .overview {
+    grid-template-columns: clamp(280px, 42vw, 480px) minmax(0, 1fr);
+    align-items: flex-start;
+  }
+}
+[data-theme=mockup] .overview .overviewMeta {
+  flex: 1;
+}
+[data-theme=mockup] .overview .release-type {
+  margin-bottom: var(--sp-1);
+}
+[data-theme=mockup] .overview .title {
+  font-size: var(--fs-4xl);
+  line-height: var(--line-height-sm);
+  font-family: var(--lp-font-heading);
+}
+[data-theme=mockup] .overview .org {
+  margin-top: var(--sp-1);
+}
+[data-theme=mockup] .overview .catalogNumber {
+  margin-top: var(--sp-1);
+  font-size: var(--fs-sm);
+  color: var(--lp-text-secondary);
+}
+[data-theme=mockup] .overview .overviewItem {
+  margin-top: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+[data-theme=mockup] .overview .overviewLabel {
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  color: var(--lp-accent);
+  text-transform: uppercase;
+}
+[data-theme=mockup] .overview a {
+  color: var(--lp-accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+[data-theme=mockup] .overview a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+[data-theme=brutalism] {
+  --lp-border: var(--lp-text);
+}
+[data-theme=brutalism] .page-container {
+  margin: var(--sp-3);
+  max-width: clamp(900px, 84vw, 1280px);
+  border: 2px solid var(--lp-text);
+  border-radius: var(--radius-lg);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .page-container {
+    margin: var(--sp-10) var(--sp-5);
+  }
+}
+@media (min-width: 992px) {
+  [data-theme=brutalism] .page-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+[data-theme=brutalism] .main-content {
+  margin-inline: 0;
+  padding-block: 0;
+  max-width: unset;
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .main-content {
+    width: auto;
+  }
+}
+[data-theme=brutalism] .store {
+  border-top: 2px solid var(--lp-text);
+  padding: var(--sp-8) var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .store {
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+[data-theme=brutalism] .demo {
+  border-top: 2px solid var(--lp-text);
+  padding: var(--sp-8) var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .demo {
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+[data-theme=brutalism] .global-footer {
+  border-top: 2px solid var(--lp-text);
+  padding: var(--sp-8) var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .global-footer {
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+
+@keyframes brutalismMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes animZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+[data-theme=brutalism] .brutalism-header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-3) var(--sp-6);
+  border-bottom: 2px solid var(--lp-text);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .brutalism-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+[data-theme=brutalism] .brutalism-header-title {
+  font-weight: bold;
+  font-size: var(--fs-lg);
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-sm);
+}
+[data-theme=brutalism] .brutalism-header-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--fs-xs);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .brutalism-header-meta {
+    text-align: right;
+  }
+}
+[data-theme=brutalism] .brutalism-header-release-type {
+  font-size: var(--fs-xs);
+}
+[data-theme=brutalism] .brutalism-header-label {
+  font-size: var(--fs-xs);
+}
+[data-theme=brutalism] .brutalism-header-catalog {
+  font-size: var(--fs-xs);
+  color: var(--lp-text-secondary);
+}
+[data-theme=brutalism] .brutalism-hero-image {
+  padding: var(--sp-4);
+  width: 100%;
+  overflow: hidden;
+}
+[data-theme=brutalism] .brutalism-hero-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  display: block;
+  object-fit: cover;
+}
+[data-theme=brutalism][data-hero-anim] .hero-img {
+  opacity: 0;
+  transform: scale(1.25);
+}
+[data-theme=brutalism][data-hero-anim] .hero-img.isLoaded {
+  animation: animZoomOut 1s ease-in-out forwards;
+}
+[data-theme=brutalism] .brutalism-marquee {
+  border-top: 2px solid var(--lp-text);
+  overflow: hidden;
+  padding-block: var(--sp-3);
+}
+[data-theme=brutalism] .brutalism-marquee-inner {
+  display: flex;
+  white-space: nowrap;
+  animation: brutalismMarquee 20s linear infinite;
+}
+[data-theme=brutalism] .brutalism-marquee-inner span {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .brutalism-marquee-inner span {
+    font-size: var(--fs-2xl);
+  }
+}
+
+[data-theme=brutalism] .overview {
+  display: grid;
+  padding: var(--sp-8) var(--sp-5);
+  border-top: 2px solid var(--lp-text);
+  gap: var(--sp-8);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .overview {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+@media (min-width: 992px) {
+  [data-theme=brutalism] .overview {
+    gap: var(--sp-12);
+  }
+}
+[data-theme=brutalism] .overviewMeta {
+  flex: 1;
+}
+[data-theme=brutalism] .overviewMeta .release-type {
+  margin-bottom: var(--sp-1);
+}
+[data-theme=brutalism] .overviewMeta .title {
+  font-size: var(--fs-3xl);
+  line-height: var(--line-height-sm);
+  font-family: var(--lp-font-heading);
+}
+[data-theme=brutalism] .overviewMeta .org {
+  margin-top: var(--sp-1);
+}
+[data-theme=brutalism] .overviewMeta .catalogNumber {
+  margin-top: var(--sp-1);
+  font-size: var(--fs-sm);
+  color: var(--lp-text-secondary);
+}
+[data-theme=brutalism] .overviewList {
+  border-top: 8px solid var(--lp-text);
+  border-bottom: 4px solid var(--lp-text);
+  padding-block: var(--sp-4);
+  margin-top: var(--sp-5);
+}
+[data-theme=brutalism] .overviewList .overviewItem {
+  display: grid;
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .overviewList .overviewItem {
+    gap: var(--sp-2);
+    grid-template-columns: 1fr 2fr;
+  }
+}
+[data-theme=brutalism] .overviewList .overviewItem:first-child {
+  margin-top: 0;
+}
+[data-theme=brutalism] .overviewList .overviewItem:not(:first-child) {
+  border-top: 1px solid var(--lp-text);
+  padding-top: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+[data-theme=brutalism] .overviewList .overviewLabel {
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  color: var(--lp-accent);
+  text-transform: uppercase;
+}
+[data-theme=brutalism] .overviewList a {
+  color: var(--lp-accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+[data-theme=brutalism] .overviewList a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+[data-theme=brutalism] .intro {
+  border-top: 2px solid var(--lp-text);
+  padding: var(--sp-8) var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .intro {
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+
+[data-theme=brutalism] .tracklist {
+  display: grid;
+  gap: var(--sp-5);
+  padding: var(--sp-8) var(--sp-5);
+  border-top: 2px solid var(--lp-text);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .tracklist {
+    padding: var(--sp-15) var(--sp-10);
+    gap: var(--sp-10);
+  }
+}
+[data-theme=brutalism] .tracklist .tracks {
+  display: flex;
+  flex-direction: column;
+  counter-reset: track-num;
+}
+[data-theme=brutalism] .tracklist .track {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-6);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--lp-border);
+  counter-increment: track-num;
+}
+[data-theme=brutalism] .tracklist .track:last-child {
+  border-bottom: none;
+}
+[data-theme=brutalism] .tracklist .track::before {
+  content: counter(track-num, decimal-leading-zero);
+  font-size: var(--fs-2xl);
+  min-width: 1.5em;
+  flex-shrink: 0;
+  color: var(--lp-accent, color-mix(in srgb, var(--lp-text) 30%, transparent));
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .tracklist .track::before {
+    font-size: var(--fs-3xl);
+  }
+}
+[data-theme=brutalism] .tracklist .track-info {
+  display: grid;
+  gap: var(--sp-1);
+  align-items: center;
+}
+[data-theme=brutalism] .tracklist .track-title {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  display: block;
+}
+[data-theme=brutalism] .tracklist .track-artist {
+  display: block;
+  color: var(--lp-text-secondary);
+  font-size: var(--fs-sm);
+  white-space: pre-line;
+}
+
+[data-theme=brutalism] .credits {
+  border-top: 2px solid var(--lp-text);
+  padding: var(--sp-8) var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .credits {
+    padding: var(--sp-15) var(--sp-10);
+  }
+}
+[data-theme=brutalism] .credits-list {
+  gap: 0;
+}
+[data-theme=brutalism] .credits-list .credits-item {
+  display: grid;
+  padding-block: var(--sp-5);
+  border-bottom: 1px solid var(--lp-border);
+  gap: var(--sp-2);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .credits-list .credits-item {
+    grid-template-columns: 1fr 1.25fr;
+    align-items: center;
+    gap: var(--sp-6);
+  }
+}
+[data-theme=brutalism] .credits-list .credits-role {
+  font-size: var(--fs-sm);
+}
+[data-theme=brutalism] .credits-list .credits-role::after {
+  display: none;
+}
+[data-theme=brutalism] .credits-list .credits-name {
+  font-size: var(--fs-md);
+  font-weight: bold;
+}
+[data-theme=brutalism] .credits-list .credits-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+@media (min-width: 768px) {
+  [data-theme=brutalism] .credits-list .credits-link {
+    justify-self: end;
+    justify-content: flex-end;
+  }
+}
+[data-theme=brutalism] .credits-list .credits-url {
+  color: var(--lp-accent);
+  text-decoration: none;
+  font-size: var(--fs-xs);
+}
+[data-theme=brutalism] .credits-list .credits-url::after {
+  content: " ↗";
+}
+
+@keyframes slashFadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slashFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slashFadeInTypo {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: var(--typo-opacity, 1);
+    transform: translateY(0);
+  }
+}
+[data-theme=slash] .slash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-6);
+  gap: var(--sp-4);
+}
+[data-theme=slash] .slash-header-title {
+  font-family: var(--lp-font-heading);
+  font-weight: bold;
+  font-size: var(--fs-md);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+[data-theme=slash] .slash-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-shrink: 0;
+}
+[data-theme=slash] .slash-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+[data-theme=slash] .slash-header-releaseType {
+  font-size: var(--fs-xs);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+[data-theme=slash] .slash-header-catalogNumber {
+  font-size: var(--fs-xs);
+  font-weight: bold;
+  white-space: nowrap;
+}
+[data-theme=slash] .slash-header-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--lp-accent);
+  color: var(--lp-bg);
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  border-radius: 9999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+[data-theme=slash] .slash-header-cta:hover {
+  opacity: 0.85;
+}
+[data-theme=slash] .hero-slash-root {
+  position: relative;
+  margin: var(--sp-4);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+@media (min-width: 768px) {
+  [data-theme=slash] .hero-slash-root {
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+@media (min-width: 1280px) {
+  [data-theme=slash] .hero-slash-root {
+    max-width: clamp(1100px, 88vw, 1600px);
+    margin: auto;
+  }
+}
+[data-theme=slash] .hero-slash-bg-layer {
+  position: absolute;
+  inset: -25% 0;
+  z-index: 0;
+  will-change: transform;
+  animation: slashFadeInBg 400ms ease-out both;
+}
+[data-theme=slash] .hero-slash-bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+[data-theme=slash] .hero-slash-bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--lp-bg) 80%, #000) 0%, var(--lp-bg) 100%);
+}
+[data-theme=slash] .hero-slash-slit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: slashFadeInUp 400ms ease-out 200ms both;
+}
+[data-theme=slash] .hero-slash-typo {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  font-weight: bold;
+  pointer-events: none;
+  user-select: none;
+  animation: slashFadeInTypo 400ms ease-out 400ms both;
+}
+[data-theme=slash] .hero-slash-typo-title {
+  font-size: 20vw;
+  font-family: var(--lp-font-heading);
+  white-space: nowrap;
+  line-height: 1;
+  color: var(--lp-text);
+}
+@media (min-width: 768px) {
+  [data-theme=slash] .hero-slash-typo-title {
+    font-size: calc(var(--hero-title-fs) * 1.3);
+  }
+}
+@media (min-width: 992px) {
+  [data-theme=slash] .hero-slash-typo-title {
+    font-size: calc(var(--hero-title-fs) * 1.2);
+  }
+}
+@media (min-width: 1280px) {
+  [data-theme=slash] .hero-slash-typo-title {
+    font-size: var(--hero-title-fs);
+  }
+}
+@media (min-width: 1600px) {
+  [data-theme=slash] .hero-slash-typo-title {
+    font-size: 12rem;
+  }
+}
+[data-theme=slash] .hero-slash-typo-title-top {
+  margin-top: -0.25em;
+}
+[data-theme=slash] .hero-slash-typo-title-bottom {
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: -0.25em;
+}
+[data-theme=slash] .hero-slash-info {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  transform: translateY(-40%);
+  padding-inline: var(--sp-6);
+  z-index: 25;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  [data-theme=slash] .hero-slash-info {
+    padding-inline: var(--sp-10);
+  }
+}
+[data-theme=slash] .hero-slash-info[data-align=center] {
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  text-align: center;
+  align-items: center;
+}
+[data-theme=slash] .hero-slash-info[data-align=center] .hero-slash-poetry {
+  max-width: 100ch;
+}
+[data-theme=slash] .hero-slash-info[data-align=right] {
+  text-align: right;
+  align-items: flex-end;
+}
+[data-theme=slash] .hero-slash-releaseType {
+  font-size: var(--fs-xxs);
+}
+[data-theme=slash] .hero-slash-title {
+  font-size: var(--fs-lg);
+  font-weight: bold;
+  font-family: var(--lp-font-heading);
+  line-height: var(--line-height-xs);
+}
+@media (min-width: 768px) {
+  [data-theme=slash] .hero-slash-title {
+    font-size: var(--fs-xl);
+  }
+}
+[data-theme=slash] .hero-slash-org {
+  font-size: var(--fs-xxs);
+}
+[data-theme=slash] .hero-slash-poetry {
+  font-size: var(--fs-xxs);
+  max-width: 50ch;
+}
+[data-theme=slash] .hero-slash-poetry p {
+  margin: 0 auto;
+  line-height: var(--line-height-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+[data-theme=slash] .hero-slash-main-layer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 115%;
+  z-index: 30;
+  will-change: transform;
+  animation: slashFadeInUp 400ms ease-out 400ms both;
+}
+[data-theme=slash] .hero-slash-main-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+[data-theme=slash] .hero-slash-fg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  animation: slashFadeInUp 400ms ease-out 600ms both;
+}
+[data-theme=slash] .hero-slash-fg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@keyframes animZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes animTitleRiseTop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 16px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes animTitleRiseBottom {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(50% + 16px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 50%);
+  }
+}
+[data-theme=classic] .hero-root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+[data-theme=classic][data-classic-hero-size=landscape] .hero-root {
+  aspect-ratio: 4/3;
+}
+@media (min-width: 768px) {
+  [data-theme=classic][data-classic-hero-size=landscape] .hero-root {
+    aspect-ratio: 16/9;
+    max-height: 1000px;
+  }
+}
+[data-theme=classic][data-classic-hero-size=screen-height] .hero-root {
+  height: 100dvh;
+}
+[data-theme=classic] .hero-img {
+  display: block;
+  width: 100%;
+}
+[data-theme=classic][data-classic-hero-size=landscape] .hero-img, [data-theme=classic][data-classic-hero-size=screen-height] .hero-img {
+  height: 100%;
+  object-fit: cover;
+}
+[data-theme=classic][data-classic-hero-size=original] .hero-img {
+  height: auto;
+}
+[data-theme=classic][data-hero-anim] .hero-img {
+  opacity: 0;
+  transform: scale(1.25);
+}
+[data-theme=classic][data-hero-anim] .hero-img.isLoaded {
+  animation: animZoomOut 1s ease-in-out forwards;
+}
+[data-theme=classic] .hero-title-image {
+  position: absolute;
+  left: 50%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  padding-inline: var(--sp-5);
+}
+@media (min-width: 768px) {
+  [data-theme=classic] .hero-title-image {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: clamp(640px, 88vw, 768px);
+  }
+}
+[data-theme=classic][data-hero-anim] .hero-title-image {
+  opacity: 0;
+}
+[data-theme=classic][data-hero-anim] .hero-title-image.hero-title-image--top {
+  transform: translate(-50%, calc(-50% + 16px));
+}
+[data-theme=classic][data-hero-anim] .hero-title-image.hero-title-image--bottom {
+  transform: translate(-50%, calc(50% + 16px));
+}
+[data-theme=classic][data-hero-anim] .hero-title-image.isLoaded.hero-title-image--top {
+  animation: animTitleRiseTop 0.8s ease-out 0.4s forwards;
+}
+[data-theme=classic][data-hero-anim] .hero-title-image.isLoaded.hero-title-image--bottom {
+  animation: animTitleRiseBottom 0.8s ease-out 0.4s forwards;
+}
+[data-theme=classic] .hero-title-image--top {
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+[data-theme=classic] .hero-title-image--bottom {
+  bottom: 30%;
+  transform: translate(-50%, 50%);
+}
+  </style>
+</head>
+<body>
+<div class="page-root"><div class="page-bg"><img src="./images/art-0.webp" alt="" width="2000" height="2000"/></div><div class="page-container"><header class="global-header"><div class="global-header-inner"><a href="#" id="global-header-title-link" class="global-header-title">ORIENTAL RADIANCE Vol.2</a><a class="global-header-organization" href="https://umsoundz.net/" target="_blank" rel="noopener noreferrer">Ultramarine Soundz</a><a href="#store" class="global-header-store-button" data-section="store">Store</a><button class="global-header-menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-header-overlay"><span class="global-header-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button></div></header><div id="global-header-overlay" class="global-header-overlay" role="dialog" aria-modal="true" aria-label="ナビゲーション"><nav class="global-header-overlay-nav" aria-label="目次"><ul class="global-header-overlay-list"><li class="global-header-overlay-item"><a href="#overview" class="global-header-overlay-link" data-section="overview">Overview</a></li><li class="global-header-overlay-item"><a href="#store" class="global-header-overlay-link" data-section="store">Store</a></li><li class="global-header-overlay-item"><a href="#intro" class="global-header-overlay-link" data-section="intro">Introduction</a></li><li class="global-header-overlay-item"><a href="#tracklist" class="global-header-overlay-link" data-section="tracklist">Tracklist</a></li><li class="global-header-overlay-item"><a href="#credits" class="global-header-overlay-link" data-section="credits">Credits</a></li></ul></nav></div><div class="lp-hero-wrapper"><header class="slash-header"><span class="slash-header-title">ORIENTAL RADIANCE Vol.2</span><div class="slash-header-right"><div class="slash-header-meta"><span class="slash-header-releaseType">Orientalcore Compilation Album</span><span class="slash-header-catalogNumber">UMSZ-002</span></div></div></header><div class="hero-slash-root"><div class="hero-slash-bg-layer"><img class="hero-slash-bg-img" src="./images/art-0.webp" alt="" width="2000" height="2000" fetchPriority="high"/></div><svg class="hero-slash-slit" viewBox="0 0 1407 776" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M891.998 776.002H70.001L70.002 776H891.999L891.998 776.002ZM1407 0L598.502 0.000976562L70.002 776H0V0H1407ZM1407 776H891.999L1407 0.000976562V776Z" fill="#884699"></path></svg><div class="hero-slash-typo" aria-hidden="true" style="--hero-title-fs:6vw;--typo-opacity:1"><div class="hero-slash-typo-title hero-slash-typo-title-top">ORIENTAL RADIANCE Vol.2</div><div class="hero-slash-info" data-align="left"><p class="hero-slash-releaseType">Orientalcore Compilation Album</p><h1 class="hero-slash-title">ORIENTAL RADIANCE Vol.2</h1><p class="hero-slash-org">Ultramarine Soundz</p><div class="hero-slash-poetry"><p>Ultramarine Soundz &quot;ORIENTAL RADIANCE Vol.2&quot;</p><p>Tracklist: 1. Zhulong (Headlights): Riku  2. Yozakura Denko  ~夜桜電光~: Altermis  3. 蒼狼: Aoi  4. 琴心剣胆: shapes  5. Yin-Yang: utzbo  6. Akatsuki Rewind: Reku Mochizuki  7. 紫電紅刀の導きなり: DRIVE.  8. 速戦即決: uma  9. Dragon scape: Dogsix  10. IZANAI: Sunajiro  11. 宵帳: グヮカモレ  12. Gyuuki: r  13. 故都葉: Kolaa  14. 瀟湘九天流虹傳輸協議: watch vs. Vanxia</p><p>UMSZ-002</p></div></div><div class="hero-slash-typo-title hero-slash-typo-title-bottom">ORIENTAL RADIANCE Vol.2</div></div></div></div><main class="main"><nav class="toc" aria-label="目次"><ul class="toc-list"><li class="toc-item"><a href="#overview" class="toc-link" data-section="overview"><span class="toc-label">Overview</span><span class="toc-dot" aria-hidden="true"></span></a></li><li class="toc-item"><a href="#store" class="toc-link" data-section="store"><span class="toc-label">Store</span><span class="toc-dot" aria-hidden="true"></span></a></li><li class="toc-item"><a href="#intro" class="toc-link" data-section="intro"><span class="toc-label">Introduction</span><span class="toc-dot" aria-hidden="true"></span></a></li><li class="toc-item"><a href="#tracklist" class="toc-link" data-section="tracklist"><span class="toc-label">Tracklist</span><span class="toc-dot" aria-hidden="true"></span></a></li><li class="toc-item"><a href="#credits" class="toc-link" data-section="credits"><span class="toc-label">Credits</span><span class="toc-dot" aria-hidden="true"></span></a></li></ul></nav><div class="main-content"><section class="overview" id="overview"><div class="overviewArtwork"><div class="artworkMainWrapper"><button class="artworkMainBtn" data-gallery-img="./images/art-0.webp" aria-label="画像を拡大表示" type="button"><img src="./images/art-0-960.webp" alt="cover" width="2000" height="2000" loading="lazy"/></button></div><div class="artworkThumbnails" role="list" aria-label="追加画像"><button class="artworkThumbBtn" data-gallery-img="./images/art-1.webp" aria-label="画像を拡大表示" type="button" role="listitem"><img src="./images/art-1.webp" alt="" aria-hidden="true" width="948" height="712" loading="lazy"/></button><button class="artworkThumbBtn" data-gallery-img="./images/art-2.webp" aria-label="画像を拡大表示" type="button" role="listitem"><img src="./images/art-2.webp" alt="" aria-hidden="true" width="1097" height="1509" loading="lazy"/></button></div></div><div class="overviewMeta"><p class="release-type">Orientalcore Compilation Album</p><h1 class="title">ORIENTAL RADIANCE Vol.2</h1><p class="org">Ultramarine Soundz</p><div class="catalogNumber">UMSZ-002</div><dl class="overviewList"><div class="overviewItem"><dt class="overviewLabel">Specification</dt><dd class="overviewValue" style="white-space:pre-wrap">プレスCD ジュエルケース</dd></div><div class="overviewItem"><dt class="overviewLabel">Price</dt><dd class="overviewValue" style="white-space:pre-wrap">Event: ￥2,500
+Shop(CD): ￥3,000(+tax)
+Shop(DL): ￥2,500</dd></div><div class="overviewItem"><dt class="overviewLabel">Release</dt><dd class="overviewValue" style="white-space:pre-wrap">2026/10/25
+2026 M3秋 第一展示場 K-18a
+「Ultramarine Soundz」</dd></div></dl></div></section><section class="store" id="store"><h2 class="store-heading" data-animate="heading"><span class="heading-inner">Store</span></h2><div class="store-buttons"><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">TANO*C STORE</a><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">Melonbooks</a><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">BOOTH(DL Version)</a><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">Bandcamp(DL Version)</a></div><h3 class="store-sub-heading">Streaming</h3><div class="store-buttons"><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">Spotify</a><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">Apple Music</a><a href="#" class="store-btn" target="_blank" rel="noopener noreferrer">Others</a></div></section><section class="intro" id="intro"><h2 class="intro-title" data-animate="heading"><span class="heading-inner">Introduction</span></h2><div class="intro-body"><h3 class="intro-subheading">─珠玉の東洋硬核(Orientalcore)を体感せよ─</h3><p class="intro-description" style="white-space:pre-wrap">Ultramarine Soundzが贈る、Orientalcoreコンピレーションアルバム第二弾。
+Riku、Aoi、Reku Mochizukiを始めとした豪華ゲスト陣と公募採用者5名によるOrientalcore 計14曲を収録。</p></div></section><section class="tracklist" id="tracklist"><h2 class="tracklist-heading" data-animate="heading"><span class="heading-inner">Tracklist</span></h2><div class="tracks"><div class="track"><div class="track-info"><strong class="track-title">Zhulong (Headlights)</strong><span class="track-artist">Riku</span></div></div><div class="track"><div class="track-info"><strong class="track-title">Yozakura Denko  ~夜桜電光~</strong><span class="track-artist">Altermis</span></div></div><div class="track"><div class="track-info"><strong class="track-title">蒼狼</strong><span class="track-artist">Aoi</span></div></div><div class="track"><div class="track-info"><strong class="track-title">琴心剣胆</strong><span class="track-artist">shapes</span></div></div><div class="track"><div class="track-info"><strong class="track-title">Yin-Yang</strong><span class="track-artist">utzbo</span></div></div><div class="track"><div class="track-info"><strong class="track-title">Akatsuki Rewind</strong><span class="track-artist">Reku Mochizuki</span></div></div><div class="track"><div class="track-info"><strong class="track-title">紫電紅刀の導きなり</strong><span class="track-artist">DRIVE.</span></div></div><div class="track"><div class="track-info"><strong class="track-title">速戦即決</strong><span class="track-artist">uma</span></div></div><div class="track"><div class="track-info"><strong class="track-title">Dragon scape</strong><span class="track-artist">Dogsix</span></div></div><div class="track"><div class="track-info"><strong class="track-title">IZANAI</strong><span class="track-artist">Sunajiro</span></div></div><div class="track"><div class="track-info"><strong class="track-title">宵帳</strong><span class="track-artist">グヮカモレ</span></div></div><div class="track"><div class="track-info"><strong class="track-title">Gyuuki</strong><span class="track-artist">r</span></div></div><div class="track"><div class="track-info"><strong class="track-title">故都葉</strong><span class="track-artist">Kolaa</span></div></div><div class="track"><div class="track-info"><strong class="track-title">瀟湘九天流虹傳輸協議</strong><span class="track-artist">watch vs. Vanxia</span></div></div></div></section><section class="credits" id="credits"><h2 class="credits-title" data-animate="heading"><span class="heading-inner">Credits</span></h2><div class="credits-list"><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Riku</span><nav class="credits-link"><a href="https://x.com/dot_h883" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Aoi</span><nav class="credits-link"><a href="https://x.com/BLUEnoup" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Reku Mochizuki</span><nav class="credits-link"><a href="https://x.com/RekuMczk" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">DRIVE.</span><nav class="credits-link"><a href="https://x.com/rkDRIVE" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">uma</span><nav class="credits-link"><a href="https://x.com/uma_0002" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Dogsix</span><nav class="credits-link"><a href="https://x.com/beauty_heeldrop" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Sunajiro</span><nav class="credits-link"><a href="https://x.com/Sunajiro8" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">r</span><nav class="credits-link"><a href="https://x.com/r_00005" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music</div><div class="credits-content"><span class="credits-name">Kolaa</span><nav class="credits-link"><a href="https://x.com/Kolaa_TD" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music(Contest Winner)</div><div class="credits-content"><span class="credits-name">Altermis</span><nav class="credits-link"><a href="https://x.com/Kai_Altermis" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music(Contest Winner)</div><div class="credits-content"><span class="credits-name">shapes</span><nav class="credits-link"><a href="https://x.com/shapes_core" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music(Contest Winner)</div><div class="credits-content"><span class="credits-name">グヮカモレ</span><nav class="credits-link"><a href="https://x.com/guwacamole" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music(Contest Winner)</div><div class="credits-content"><span class="credits-name">watch</span><nav class="credits-link"><a href="https://x.com/silverwatchcfs" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music, Erhu(Contest Winner)</div><div class="credits-content"><span class="credits-name">Vanxia</span><nav class="credits-link"><a href="https://x.com/Vanxia1266" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Illustration</div><div class="credits-content"><span class="credits-name">原木シィタケ</span><nav class="credits-link"><a href="https://x.com/Zatsuki_Ctake" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Design, XFD</div><div class="credits-content"><span class="credits-name">ムッシュ竹崎</span><nav class="credits-link"><a href="https://x.com/kagetsu_mush" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div><div class="credits-item"><div class="credits-role">Music, Mastering, Produce</div><div class="credits-content"><span class="credits-name">utzbo</span><nav class="credits-link"><a href="https://x.com/utzzbo" class="credits-url" target="_blank" rel="noopener noreferrer">X (Twitter)</a></nav></div></div></div></section></div><footer class="global-footer"><div class="footer-logo"><a href="https://umsoundz.net/" target="_blank" rel="noopener noreferrer"><img src="./images/circle-logo.webp" alt="Ultramarine Soundz" width="400" height="187"/></a></div><p class="footer-copyright"><a href="https://umsoundz.net/" target="_blank" rel="noopener noreferrer">© 2026 Ultramarine Soundz</a></p><nav class="footer-links"><a href="https://umsoundz.net/" class="footer-link-btn" target="_blank" rel="noopener noreferrer">Circle Website</a></nav><p class="footer-credit"><a href="https://tokusetsu5.sanographix.net" target="_blank" rel="noopener noreferrer">Made with Tokusetsu 5</a></p></footer></main></div></div>
+<script>
+  // slash テーマ：スクロールに応じてパララックス効果を適用する
+  // 背景は遅く（遠い距離感）、主役は少し速く（中間距離）動かすことで奥行きを演出する
+  (function () {
+    var bgLayer = document.querySelector('.hero-slash-bg-layer');
+    var mainLayer = document.querySelector('.hero-slash-main-layer');
+    if (!bgLayer && !mainLayer) return;
+
+    function update() {
+      var scrollY = window.scrollY;
+      // ヒーロー高さの20%を最大移動量とする（CSSの inset:-25% と対応）
+      var heroH = (bgLayer || mainLayer).closest('.hero-slash-root');
+      var maxBgShift = heroH ? heroH.offsetHeight * 0.2 : 140;
+      // 背景: 0.4 倍速でゆっくり追従（遠い距離感）
+      if (bgLayer) {
+        var bgShift = Math.min(scrollY * 0.4, maxBgShift);
+        bgLayer.style.transform = 'translateY(' + bgShift + 'px)';
+      }
+      // 主役: 0.15 倍速で追従（中間距離）
+      if (mainLayer) {
+        var mainShift = Math.min(scrollY * 0.15, maxBgShift * 0.4);
+        mainLayer.style.transform = 'translateY(' + mainShift + 'px)';
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    // 初期表示時にも実行して初期状態を確定する
+    update();
+  })();
+
+  // グローバルヘッダー: IntersectionObserver でヒーローセクションを監視し、
+  // 画面外に出たら .is-visible を付与してヘッダーをスライドイン表示する
+  (function () {
+    var header = document.querySelector('.global-header');
+    var heroWrapper = document.querySelector('.lp-hero-wrapper');
+    if (!header || !heroWrapper) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        // ヒーローが少しでも見えている間はヘッダーを隠す
+        // 完全に画面外に出たら（isIntersecting === false）ヘッダーを表示する
+        if (entries[0].isIntersecting) {
+          header.classList.remove('is-visible');
+        } else {
+          header.classList.add('is-visible');
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(heroWrapper);
+  })();
+
+  // グローバルヘッダー: タイトルリンクをクリックするとページトップへスムーズスクロールする
+  (function () {
+    var titleLink = document.getElementById('global-header-title-link');
+    if (!titleLink) return;
+    titleLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  // data-section 属性を持つリンクは共通で scrollIntoView によるスムーズスクロールを行う
+  (function () {
+    var sectionLinks = document.querySelectorAll('a[data-section]');
+    if (!sectionLinks.length) return;
+
+    sectionLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var sectionId = link.getAttribute('data-section');
+        if (!sectionId) return;
+        var section = document.getElementById(sectionId);
+        if (!section) return;
+        e.preventDefault();
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  })();
+
+  // グローバルヘッダー: ハンバーガーボタンで全画面オーバーレイを開閉する
+  // オーバーレイ内のリンクをクリックすると、メニューを閉じてスムーススクロールする
+  (function () {
+    var menuBtn = document.querySelector('.global-header-menu-btn');
+    var overlay = document.querySelector('.global-header-overlay');
+    if (!menuBtn || !overlay) return;
+
+    function openMenu() {
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      menuBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    // ハンバーガーボタン自体がトグルスイッチとして機能する（開く・閉じる両方）
+    menuBtn.addEventListener('click', function () {
+      if (overlay.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+    });
+
+    // オーバーレイ内の各リンク: メニューを閉じる（スクロールは共通 data-section ハンドラに委譲）
+    var navLinks = overlay.querySelectorAll('.global-header-overlay-link[data-section]');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        closeMenu();
+      });
+    });
+
+    // Escape キーでメニューを閉じる
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) { closeMenu(); }
+    });
+  })();
+
+  // TOC のクリックナビゲーションとスクロールハイライト
+  (function () {
+    var tocLinks = document.querySelectorAll('.toc-link[data-section]');
+    if (!tocLinks.length) return;
+
+    // スクロール位置に基づいてアクティブ項目を更新する
+    // IntersectionObserver の rootMargin 方式は短いセクションで不安定なため、
+    // scroll イベントでセクションの offsetTop と現在の基準点を比較する方式を採用する
+    // 複数リンクが同一セクション ID を指す場合があるため、セクション ID は一度だけ登録する
+    var sectionIds = [];
+    tocLinks.forEach(function (link) {
+      var id = link.getAttribute('data-section');
+      if (sectionIds.indexOf(id) === -1) { sectionIds.push(id); }
+    });
+    var sections = [];
+    sectionIds.forEach(function (id) {
+      var section = document.getElementById(id);
+      if (section) { sections.push({ id: id, el: section }); }
+    });
+
+    function updateActive() {
+      // getBoundingClientRect().top はビューポート上端からの距離を返す（ネスト構造に依存しない）
+      // offsetTop は親要素からの相対値なので深い階層では絶対位置がずれるため使わない
+      // ビューポート下端から 20% の位置（上端から 80%）を基準点とする
+      var triggerY = window.innerHeight * 0.8;
+      // 基準点より上にある最後のセクションをアクティブとする
+      var activeId = sections.length ? sections[0].id : null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].el.getBoundingClientRect().top <= triggerY) { activeId = sections[i].id; }
+      }
+      // 全 TOC リンクからアクティブクラスを除去してから、該当セクションのリンクに付与する
+      tocLinks.forEach(function (link) { link.classList.remove('is-active'); });
+      if (activeId) {
+        var activeLink = document.querySelector('.toc-link[data-section="' + activeId + '"]');
+        if (activeLink) { activeLink.classList.add('is-active'); }
+      }
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    // 初期表示時にも実行して先頭項目をアクティブにする
+    updateActive();
+  })();
+
+  // data-animate="heading" を持つ見出し要素を Intersection Observer で監視し
+  // ビューポートに入ったタイミングで .is-visible を付与してアニメーションを発火する
+  // preview モードでは即座にすべての見出しを表示してアニメーションをスキップする
+  (function () {
+    var headings = document.querySelectorAll('[data-animate="heading"]');
+    if (!headings.length) return;
+
+    // char-reveal: 見出しテキストを1文字ずつの <span class="char"> に事前分割する
+    // IntersectionObserver で .is-visible が付与された時点でアニメーションが走るよう
+    // ページ読み込み時にあらかじめ DOM を組み換えておく
+    var animations = document.documentElement.getAttribute('data-animations');
+    if (animations === 'char-reveal') {
+      headings.forEach(function (heading) {
+        var inner = heading.querySelector('.heading-inner');
+        if (!inner) return;
+        var text = inner.textContent || '';
+        inner.textContent = '';
+        text.split('').forEach(function (char, i) {
+          var span = document.createElement('span');
+          span.className = 'char';
+          span.style.setProperty('--char-index', String(i));
+          // スペースはノーブレークスペースに置換して表示を維持する
+          span.textContent = char === ' ' ? ' ' : char;
+          inner.appendChild(span);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      // IntersectionObserver 非対応環境ではすべて即表示
+      headings.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            // ビューポートに入ったらアニメーションを発火する
+            entry.target.classList.add('is-visible');
+          } else {
+            // ビューポートから外れたらリセットし、次回スクロール時に再発火できるようにする
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    headings.forEach(function (el) { observer.observe(el); });
+  })();
+
+  // ライトボックス: Overview の作品画像クリックで拡大表示・左右矢印で切り替え
+  (function () {
+    var galleryBtns = document.querySelectorAll('[data-gallery-img]');
+    if (!galleryBtns.length) return;
+
+    // 全画像の src リストと現在表示中のインデックス
+    var srcs = Array.prototype.map.call(galleryBtns, function (btn) {
+      return btn.getAttribute('data-gallery-img');
+    });
+    var currentIndex = 0;
+    // 現在ライトボックスで表示中の画像に対応するサムネイル img 要素（閉じるときに戻す）
+    var activeThumbImg = null;
+
+    // オーバーレイ要素を作成して body に追加
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = [
+      '<button class="lightbox-close" aria-label="閉じる" type="button">&#x2715;</button>',
+      '<button class="lightbox-prev" aria-label="前の画像" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="m10.4 12 6.95 6.95c.35.35.525.775.525 1.275 0 .5-.183.933-.55 1.3-.35.35-.775.525-1.275.525-.5 0-.925-.175-1.275-.525l-7.325-7.3a3.052 3.052 0 0 1-.7-1.05A3.199 3.199 0 0 1 6.525 12c0-.4.075-.792.225-1.175.15-.383.383-.733.7-1.05l7.325-7.3c.35-.35.775-.53 1.275-.537.5-.009.933.17 1.3.537.35.35.525.78.525 1.288S17.7 4.7 17.35 5.05L10.4 12Z"/></svg></button>',
+      '<img class="lightbox-img" src="" alt="">',
+      '<button class="lightbox-next" aria-label="次の画像" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="m13.675 12-6.95-6.95A1.736 1.736 0 0 1 6.2 3.775c0-.5.175-.925.525-1.275.35-.35.78-.525 1.288-.525S8.95 2.15 9.3 2.5l7.3 7.275c.317.317.55.667.7 1.05a3.198 3.198 0 0 1 0 2.35c-.15.383-.383.733-.7 1.05l-7.3 7.3c-.35.35-.775.52-1.275.513A1.78 1.78 0 0 1 6.75 21.5a1.75 1.75 0 0 1-.525-1.287c0-.509.175-.938.525-1.288L13.675 12Z"/></svg></button>',
+      '<div class="lightbox-counter"></div>',
+    ].join('');
+    document.body.appendChild(overlay);
+
+    var img = overlay.querySelector('.lightbox-img');
+    var prevBtn = overlay.querySelector('.lightbox-prev');
+    var nextBtn = overlay.querySelector('.lightbox-next');
+    var counterEl = overlay.querySelector('.lightbox-counter');
+
+    // 画像が1枚のときは矢印・カウンターを非表示にする
+    function updateNav() {
+      var single = srcs.length <= 1;
+      prevBtn.style.display = single ? 'none' : '';
+      nextBtn.style.display = single ? 'none' : '';
+      counterEl.style.display = single ? 'none' : '';
+      if (!single) { counterEl.textContent = (currentIndex + 1) + ' / ' + srcs.length; }
+    }
+
+    // View Transitions API ラッパー: 非対応ブラウザは fn() を直接呼ぶ
+    function withVT(fn) {
+      if (document.startViewTransition) { return document.startViewTransition(fn); }
+      fn();
+      return null;
+    }
+
+    // 要素の view-transition-name を設定・解除するヘルパー
+    function setVTN(el, name) {
+      if (el) el.style.viewTransitionName = name;
+    }
+
+    function openLightbox(index) {
+      currentIndex = (index + srcs.length) % srcs.length;
+      var btn = galleryBtns[currentIndex];
+      // クリックしたサムネイルの <img> を取得（ボタン直下の img に VTN をセット → OLD スナップショット）
+      activeThumbImg = btn.querySelector('img') || btn;
+      setVTN(activeThumbImg, 'lightbox-hero');
+
+      withVT(function () {
+        // VT コールバック内: サムネイルから VTN を外し、ライトボックス img に付け直す（NEW スナップショット）
+        setVTN(activeThumbImg, '');
+        img.src = srcs[currentIndex];
+        setVTN(img, 'lightbox-hero');
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        updateNav();
+      });
+    }
+
+    function closeLightbox() {
+      // OLD スナップショット: lightbox-img が VTN を持っている状態をキャプチャ
+      var vt = withVT(function () {
+        setVTN(img, '');
+        // サムネイルに VTN を付け直す → VT がライトボックス位置からサムネイル位置へモーフィング
+        if (activeThumbImg) setVTN(activeThumbImg, 'lightbox-hero');
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        img.src = '';
+      });
+      // VT 完了後にサムネイルの VTN を掃除
+      var cleanup = function () {
+        if (activeThumbImg) setVTN(activeThumbImg, '');
+        activeThumbImg = null;
+        document.documentElement.removeAttribute('data-lightbox-nav');
+      };
+      if (vt) { vt.finished.then(cleanup); } else { cleanup(); }
+    }
+
+    function navigateLightbox(direction) {
+      // ナビゲーションは VT を使わず CSS アニメーションで処理する
+      // （VT の view-transition-group がサイズモーフィングを起こして方向が崩れるため）
+      currentIndex = (currentIndex + direction + srcs.length) % srcs.length;
+      img.src = srcs[currentIndex];
+      updateNav();
+      // 同クラスを一度外してリフロー → 付け直すことでアニメーションをリセット
+      var cls = direction > 0 ? 'lb-nav-next' : 'lb-nav-prev';
+      img.classList.remove('lb-nav-next', 'lb-nav-prev');
+      void img.offsetWidth;
+      img.classList.add(cls);
+    }
+
+    // 各ギャラリーボタンにクリックリスナー
+    galleryBtns.forEach(function (btn, i) {
+      btn.addEventListener('click', function () { openLightbox(i); });
+    });
+
+    prevBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navigateLightbox(-1);
+    });
+
+    nextBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navigateLightbox(1);
+    });
+
+    overlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+
+    // オーバーレイ背景クリックで閉じる
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) { closeLightbox(); }
+    });
+
+    // キーボード: Escape で閉じる / 左右矢印で切り替え
+    document.addEventListener('keydown', function (e) {
+      if (!overlay.classList.contains('is-open')) return;
+      if (e.key === 'Escape') { closeLightbox(); }
+      else if (e.key === 'ArrowLeft') { navigateLightbox(-1); }
+      else if (e.key === 'ArrowRight') { navigateLightbox(1); }
+    });
+  })();
+</script>
+
+</body>
+</html>

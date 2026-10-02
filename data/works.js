@@ -19,6 +19,20 @@ export const tags = {
   other: "その他",
 }
 
+/**
+ * @typedef {Object} Work
+ * @property {string} id
+ * @property {string} title
+ * @property {string} date
+ * @property {string[]} tags
+ * @property {string} description
+ * @property {string} [youtube]
+ * @property {string} [soundcloudUrl]
+ * @property {string} [thumbnail]
+ * @property {{ label: string, url: string }[]} [externalLinks]
+ */
+
+/** @type {Work[]} */
 export const works = [
   {
     id: "work-26-10-11",
