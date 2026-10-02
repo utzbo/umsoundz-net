@@ -21,6 +21,17 @@ export const tags = {
 
 export const works = [
   {
+    id: "work-26-10-04-1",
+    title: "時空渦様「Astral Elysium 4」マスタリング担当",
+    date: "2026-10-04",
+    tags: [tags.mastering],
+    description: "アルバムのマスタリングを担当しました。",
+    youtube: "qiXu1hFJQ7I",
+    externalLinks: [
+      { label: "特設サイト", url: "https://zk-0004.pages.dev/" },
+    ],
+  },
+  {
     id: "work-26-10-11",
     title: "Ruminas Rave様「TECHNICAL SCORE」マスタリング担当",
     date: "2026-10-11",
