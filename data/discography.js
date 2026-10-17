@@ -29,7 +29,7 @@ export const discography = [
     date: "2025-10-26",
     tags: ["オリジナル", "アルバム", "コンピレーション"],
     description: "Ultramarine Soundzが贈る、Orientalcoreコンピレーションアルバム第二弾。\nRiku、Aoi、Reku Mochizukiを始めとした豪華ゲスト陣と公募採用者5名によるOrientalcore 計14曲を収録。",
-    youtube: "5AW7ATmuPUg",
+    youtube: "CzLDC9qaXjc",
     links: [
       { label: "特設サイト", url: "/releases/UMSZ-002/" },
     ],
