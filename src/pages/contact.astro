@@ -2,6 +2,29 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { SITE_CONFIG } from '../config.js';
+
+// マスタリング料金（円）
+const MASTERING_PRICE_PER_TRACK = 750;
+const MASTERING_PRICE_PER_DISC = 1000;
+
+// 料金例：discs に各ディスクの曲数を並べる
+const masteringExamples = [
+  { label: '12曲入りアルバムの場合', discs: [12] },
+  { label: '1曲のみのシングルの場合', discs: [1] },
+  { label: '12曲と10曲の2枚組アルバムの場合', discs: [12, 10] },
+].map(({ label, discs }) => {
+  const trackTerms = discs.map((n) => `${MASTERING_PRICE_PER_TRACK} × ${n}`);
+  const discTerm = discs.length > 1
+    ? `${MASTERING_PRICE_PER_DISC} × ${discs.length}`
+    : `${MASTERING_PRICE_PER_DISC}`;
+  const total = discs.reduce((sum, n) => sum + MASTERING_PRICE_PER_TRACK * n, 0)
+    + MASTERING_PRICE_PER_DISC * discs.length;
+  return {
+    label,
+    formula: [...trackTerms, discTerm].join(' + '),
+    total: total.toLocaleString('ja-JP'),
+  };
+});
 ---
 
 <BaseLayout title="Contact">
@@ -25,11 +48,62 @@ import { SITE_CONFIG } from '../config.js';
 
       <div class="text-sm">
         <p class="text-left text-base-content/70 mb-10 leading-relaxed whitespace-pre-line">
-          有償依頼はご予算、納期をお伝えください。
-          制作依頼の場合は併せて楽曲のイメージやジャンル、参考音源などもお伝えいただけるとスムーズです。
+          制作依頼はご予算、納期、楽曲のイメージやジャンル、また可能であれば参考音源を添えてご連絡ください。マスタリングのご依頼は、下記の料金表をご参照ください。
 
           返信には数日かかる場合がございます。万が一1週間以上経っても返信がない場合は、お手数ですが再度ご連絡いただけますと幸いです。
         </p>
+      </div>
+
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body text-sm">
+          <h2 class="card-title font-display text-lg">マスタリング料金</h2>
+
+          <table class="table mt-2">
+            <tbody>
+              <tr>
+                <th class="font-normal text-base-content/70">1曲あたり</th>
+                <td class="text-right">{MASTERING_PRICE_PER_TRACK.toLocaleString('ja-JP')}円</td>
+              </tr>
+              <tr>
+                <th class="font-normal text-base-content/70">1ディスク（またはタイトル）あたり</th>
+                <td class="text-right">{MASTERING_PRICE_PER_DISC.toLocaleString('ja-JP')}円</td>
+              </tr>
+              <tr>
+                <th class="font-normal text-base-content/70">DDP書き出し</th>
+                <td class="text-right">無償</td>
+              </tr>
+              <tr>
+                <th class="font-normal text-base-content/70">納期</th>
+                <td class="text-right">3日～1週間</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <ul class="text-xs text-base-content/50 mt-1 space-y-1">
+            <li>※ DDPは曲間無音0秒で書き出します。</li>
+            <li>※ 納期は曲数と手持ちの案件数により前後する可能性がございます。</li>
+          </ul>
+
+          <h3 class="font-bold mt-6">料金例</h3>
+          <ul class="mt-2 space-y-3">
+            {masteringExamples.map((ex) => (
+              <li>
+                <p class="text-base-content/70">{ex.label}</p>
+                <p class="font-mono">{ex.formula} = <span class="font-bold">{ex.total}円</span></p>
+              </li>
+            ))}
+          </ul>
+
+          <h3 class="font-bold mt-6">ご依頼時にお伝えいただきたいこと</h3>
+          <ul class="list-disc list-inside mt-2 text-base-content/80 space-y-1">
+            <li>希望納期</li>
+            <li>2mix音源の提供タイミング</li>
+            <li>セルフマスター音源の有無(あると助かります)</li>
+            <li>曲数</li>
+            <li>納品するwavのフォーマット(サンプルレート / ビット深度)</li>
+            <li>DDP書き出しの要否</li>
+          </ul>
+        </div>
       </div>
 
     </div>
