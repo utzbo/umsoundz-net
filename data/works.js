@@ -35,6 +35,38 @@ export const tags = {
 /** @type {Work[]} */
 export const works = [
   {
+    id: "work-26-10-25-2",
+    title: "べあー杯様「ASTRA ~ABEAR CUP THEME SONG COLLECTION 2~」マスタリング担当",
+    date: "2026-10-25",
+    tags: [tags.mastering],
+    description: "アルバムのマスタリングを担当しました。",
+    externalLinks: [
+      { label: "告知ツイート", url: "https://x.com/abear_HiA/status/2112121686099423368?s=20" },
+    ],
+  },
+  {
+    id: "work-26-10-25-1",
+    title: "up lug records様「AndantUP」楽曲提供",
+    date: "2026-10-25",
+    tags: [tags.commission, tags.doujin],
+    description: "「Sprite Stride」を提供させていただきました。",
+    youtube: "ZPusn5_DUac",
+    externalLinks: [
+      { label: "特設サイト", url: "https://release.up-lug-records.com/AndantUP/" },
+    ],
+  },
+  {
+    id: "work-26-10-04-2",
+    title: "Starry Canyon様「Permanent Night Drop」 アレンジ提供/マスタリング担当",
+    date: "2026-10-04",
+    tags: [tags.remix, tags.mastering, tags.doujin, tags.touhou],
+    description: "「Intoxicated Full Moon」の提供とマスタリングを担当しました。\n原曲：狂気の瞳 ～ Invisible Full Moon",
+    youtube: "NeqHtMK7rmM",
+    externalLinks: [
+      { label: "告知ツイート", url: "https://x.com/setcanon/status/2106323380492206347?s=20" },
+    ],
+  },
+  {
     id: "work-26-10-04-1",
     title: "時空渦様「Astral Elysium 4」マスタリング担当",
     date: "2026-10-04",
